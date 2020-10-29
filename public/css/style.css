@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 50%;
+    text-align: center;
+}
+
+.login-container{
+    width: 50%;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 75vh;
+
+    background: transparent linear-gradient(180deg, #6A2570 0%, #351338 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 90px;
+}
+
+button{
+    background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 70px;
+
+    width: 16vw;
+    height: 7vh;
+    color: white;
+    margin: 2em;
+    line-height: 2.5em;
+    font: normal normal normal 1em Segoe Script;
+}
+
+input{
+    background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FCFAFA;
+    border-radius: 70px;
+    text-align: left;
+    font: normal normal normal 80% Segoe Script;
+    letter-spacing: 0px;
+    color: #ffffff;
+    width: 80%;
+    height: 5vh;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+text{
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font: normal normal normal 1.2em Segoe Script;
+    letter-spacing: 0px;
+    color: #ffffff;
+    width: 80%;
+}
