@@ -41,10 +41,10 @@ button{
     border: 1px solid #FFFFFF;
     border-radius: 70px;
 
-    width: 16vw;
+    width: 14vw;
     height: 7vh;
     color: white;
-    margin: 2em;
+    margin: 1.2em;
     line-height: 2.5em;
     font: normal normal normal 1em Segoe Script;
 }
@@ -71,4 +71,220 @@ text{
     letter-spacing: 0px;
     color: #ffffff;
     width: 80%;
+}
+
+.container1{
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    flex-flow: wrap;
+}
+
+.small_logo{
+    text-align: left;
+    justify-content: center;
+    margin: 0.34em;
+}
+
+.small_logo img{
+    width: 5.4em;
+    text-align: left;
+
+}
+.logo-container{
+    width: 100%;
+    background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+}
+
+form1{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+
+    background: transparent linear-gradient(180deg, #6E1F75 0%, #2E0A33B8 59%, #38123B 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+}
+
+.menu-container{
+    background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FCF9F9;
+    border-radius: 70px;
+    margin:0.2em;
+    width: 15%;
+}
+
+form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 81.9vh;  
+}
+
+.find-container{
+    margin-left: 30em;
+    margin:0.2em;
+    width: 83%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form3{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    font: normal normal normal 2.9em Segoe Script;
+    color: #ffffff;
+}
+
+.invitation{
+    text-align: center;
+    font: normal normal normal 0.8em Segoe Script;
+    color: #ffffff;
+}
+
+.find{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 50em;
+}
+
+.find input{
+    background: transparent linear-gradient(180deg, #69246E 0%, #9B5B9F 0%, #9F60A3 0%, #A061A48F 100%, #A162A5 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    height: 7vh;
+    width: 90vw;
+   
+}
+
+.find input[type="search"]{
+    position: relative;
+    width: 33em;
+    left: +43%;
+    border: 1px solid #FCFAFA;
+    border-radius: 60px;
+    text-align: left;
+    font: normal normal normal 1em Segoe Script;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.find input[placeholder="Adres, np. Armi Krajowej 1"]{
+    font: normal normal normal 1em Segoe Script;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.find input[type="submit"]{
+    position: relative;
+    width: 12vw;
+    left: +18%;
+    background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FCFAFA;
+    border-radius: 70px;
+    cursor: pointer;
+    text-align: center;
+    font: normal normal normal 1em Segoe Script;
+    color: #ffffff;
+}
+
+.recommended-container{
+    display: flex;
+    margin:0.2em;
+    flex-direction: row;
+    justify-content: center;
+    margin-inline-start: 2.7em;
+}
+
+.recommended text{
+    text-align: left;
+    font: normal normal normal 1.5em Segoe Script;
+    color: #ffffff;
+}
+
+.recommended-logo{
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+
+form5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;  
+}
+
+.recommended-logo img{
+    width: 96%;
+}
+
+.recommended-description{
+    margin: 0.2em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.img1{
+    width: 26.3em;
+}
+
+.name text{
+    font: normal normal normal 1.1em Segoe Script;
+}
+
+.profession text{
+    font: normal normal normal 0.8em Segoe Script;
+}
+
+.description text{
+    font: normal normal normal 1em Segoe Script;
+}
+
+.fa-instagram{
+    margin-top: 3em;
+    color: white;
+    margin-right: 2em;
+}
+
+.fa-twitter{
+    margin-top: 3em;
+    color: white;
+    margin-right: 2em;
+}
+.fa-facebook-f{
+    margin-top: 3em;
+    color: white;
+    margin-right: 2em;
+}
+
+.fa-user-friends{
+    margin-inline-start: 80%;
+    color: white;
+    margin-top: 3em;
+    margin-right: 2em;
+}
+
+.fa-home{
+    color: white;
+    margin-top: 3em;
+    margin-right: 2em;
+}
+
+.fa-cog{
+    color: white;
+    margin-top: 3em;
+    margin-right: 2em;
+    size: x3;
 }
