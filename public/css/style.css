@@ -156,7 +156,7 @@ form3{
     display: flex;
     flex-direction: row; 
     justify-content: center;
-    width: 50em;
+    
 }
 
 .find input{
@@ -169,12 +169,11 @@ form3{
 
 .find input[type="search"]{
     position: relative;
-    width: 33em;
-    left: +43%;
+    width: 40%;
+    left: +6%;
     border: 1px solid #FCFAFA;
     border-radius: 60px;
     text-align: left;
-    font: normal normal normal 1em Segoe Script;
     letter-spacing: 0px;
     color: #FFFFFF;
 }
@@ -186,15 +185,14 @@ form3{
 
 .find input[type="submit"]{
     position: relative;
-    width: 12vw;
-    left: +18%;
+    right: 4%;
+    width: 13%;
     background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #FCFAFA;
     border-radius: 70px;
     cursor: pointer;
     text-align: center;
-    font: normal normal normal 1em Segoe Script;
-    color: #ffffff;
+    
 }
 
 .recommended-container{
@@ -215,6 +213,7 @@ form3{
     border: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 form4{
@@ -360,7 +359,7 @@ form5{
 .addresses-container{
     display: flex;
     flex-direction: column;
-    margin: 3em;
+    margin: 2em;
     width: 80%;
 }
 
@@ -374,9 +373,9 @@ form5{
     text-align: center;
 }
 
-.fa-compass{
+i.fa-compass{
     color: white;
-    margin-top: 2.3em;
+    margin-top: 1.5em;
     margin-right: 1em;
 }
 
@@ -384,7 +383,7 @@ form5{
     display: flex;
     flex-direction: column;
     text-align: left;
-    font: normal normal normal 1.5em Segoe Script;
+    font: normal normal normal 1.2em Segoe Script;
     width: 100%;
 }
 
@@ -410,6 +409,7 @@ form5{
 }
 
 .fa-plus-circle{
+    margin-inline-start: -3.5em;
     left: -4em;
     margin-top: 2em;
     color: white;
@@ -420,7 +420,7 @@ form5{
 }
 
 hr{
-    margin-top: 2em;
+    margin-top: 1em;
     background: white;
     color: white;
     width: 100%;
@@ -429,9 +429,128 @@ hr{
 
 .addresses-container button{
     width: 25%;
-    height: 5em;
+    height: 3em;
     margin-left: 0%;
     background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #FCFAFA;
     border-radius: 70px;
+}
+
+.favourite-setting-container{
+    display: flex;
+    flex-direction: row;
+    background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FCF9F9;
+    border-radius: 70px;
+    margin:0.2em;
+    width: 100%;
+    height: 80%;
+}
+
+.favourite-setting-container button{
+    text-align: center;
+    width: 25vw;
+}
+
+.favourite-container{
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    width: 42%;
+}
+
+.description-favourite{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-end: 3em;
+}
+
+.favourites-description{
+    text-align: center;
+}
+
+.favourites-description text{
+    display: flex;
+    flex-direction: column;
+    font: normal normal normal 1.1em Segoe Script;
+    width: 100%;
+}
+
+.description-favourite .fa-heart{
+    color: white;
+    margin-top: 1.1em;
+    margin-right: 1em;
+}
+
+form6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.favourites{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.favourite1{
+    width: 15vw;
+    margin-right: -3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+.favourite2{
+    margin-right: -3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+.favourite3{
+    margin-right: -3em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.favourite1 button, .favourite2 button, .favourite3 button{
+    margin-top: 3em;
+    width: 40%;;
+}
+
+.favourite1 img, .favourite2 img, .favourite3 img{
+    width: 40%;
+}
+
+.favourite-name{
+    margin-top: 1em;
+}
+
+.favourite-name text{
+    font: normal normal normal 1.1em Segoe Script;
+}
+                        
+.favourite-profession text{
+    font: normal normal normal 0.8em Segoe Script;
+}
+
+.favourite-description text{
+    font: normal normal normal 1em Segoe Script;
 }
