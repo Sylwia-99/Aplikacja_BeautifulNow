@@ -286,7 +286,6 @@ form4{
     color: white;
     margin-top: 3em;
     margin-right: 2em;
-    size: x3;
 }
 
 .setting-container{
@@ -331,4 +330,14 @@ form5{
 }
 .fa-sign-out-alt{
     margin-right: 4.6em;
+}
+
+.small-profile{
+    margin-inline-start: 80%;
+    margin-top: 2.5em;
+    margin-right: 1.3em;
+    width: 3em;
+}
+.small-profile img{
+    width: 2em;
 }
