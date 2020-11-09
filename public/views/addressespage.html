@@ -5,48 +5,70 @@
     <title>ADDRESSES PAGE</title>
 </head>
 <body>
-    <div class="container1">
-        <div class="logo-container">
-            <form1>
-                <div class="small_logo">
-                    <img src="../img/logo.svg">
+    <div class="container-base">
+        <div id="header">
+            <header>
+                <img src="../img/logo.svg">
+                <div id="icon">
+                    <img src="../img/profile.svg">
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-cog"></i>
                 </div>
-                <div class="small-profile">
+            </header>
+        </div>
+        <div id="setting-favourite">
+            <nav id=favourites>
+                <div id="profile">
                     <img src="../img/profile.svg">
                 </div>
-                <i class="fas fa-home"></i>
-                <i class="fas fa-cog"></i>
-            </form1>
-        </div>
-        <div class="addresses-setting-container">
-            <div class="profile">
-                <img src="../img/profile.svg">
-            </div>
-            <form5>
-                <button><i class="fas fa-heart"></i> Ulubione</button>
-                <button><i class="fas fa-history"></i>Historia Usług</button>
-                <button><i class="fas fa-location-arrow"></i> Adresy</button>
-                <button><i class="fas fa-sign-out-alt"></i> Wyloguj</button>
-            </form5>
-            <div class="addresses-container">
-                <div class="description-address">
+                <ul id="f">
+                    <li>  
+                        <a id="f" href="#" class="button"><i class="fas fa-heart"></i> Ulubione</a>
+                    </li>
+                    <li>
+                        <a id="f" href="#" class="button"><i class="fas fa-history"></i> Historia Usług</a>
+                    </li>
+                    <li>
+                        <a id="f" href="#" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
+                    </li>
+                    <li>
+                        <a id="f" href="#" class="button"><i class="fas fa-sign-out-alt"></i> Wyloguj</a>
+                    </li>
+                </ul>
+            </nav>
+            <main id=favourites>
+                <div id=description>
                     <i class="far fa-compass"></i>
-                    <div class="adress-description">
-                        <text>Tu znajdziesz dodane</text>
-                        <text>przez Ciebie adresy</text>
+                    <div>
+                        <h5>Tu znajdziesz dodane</h5>
+                        <h5>przez Ciebe adresy</h5>
+                    </div> 
+                </div>
+                <div class="input">
+                    <input class="form-control" type="search" placeholder="Nawigacja/ Adres">
+                    <span class="input-addon"><i class="fas fa-plus-circle "></i></span>
+                </div>
+                <hr/>
+                    <div id="addresses">
+                        <h2>Adresy</h2>
+                        <a id="d" href="#" class="button"> Dodaj Adres</a>
+                        <section class="added">
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                            <h4>Sąspów</h4>
+                        </section>
                     </div>
-                </div>
-            <div class="input">
-                <input class="form-control" type="search" placeholder="Nawigacja/ Adres">
-                <span class="input-addon"><i class="fas fa-plus-circle "></i></span>
-            </div>
-            <hr/>
-                <div class="addresses">
-                    <text>Adresy</text>
-                </div>
-                <button>Dodaj adres</button>
-            </div>
+                </div> 
+            </main>
         </div>
-        
-    </div>
+    </div>  
 </body>
