@@ -486,6 +486,34 @@ ul#f> i{
     margin: 12em;
 }
 
+div#find input#s1[type="search"]{
+    margin-right: 0;
+    width: 36%;
+    left: +2%;
+}
+
+div#find input#s2[type="date"]{
+    width: 36%;
+    left: +2%;
+    border: 1px solid #FCFAFA;
+    position: relative;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-left: 0;
+    border-radius:0;
+    height: inherit;
+}
+
+div#find input#s[type="submit"]{
+    width: 12%;
+    left: 0.5%;
+    margin-left: 0;
+    position: relative;
+    border-radius:0px 70px 70px 0px;
+}
+
+
 @media only screen and (max-device-width: 420px){
     .container{
         flex-direction: column;
@@ -566,6 +594,19 @@ ul#f> i{
         right: 7%;
         width: 30%;   
         height: 3em;
+    }
+
+    div#find input#s1[type="search"]{
+        width: 100%;
+    }
+
+    div#find input#s2[type="date"]{
+        width: 100%;
+    }
+
+    div#find input#s[type="submit"]{
+        left: -1.5%;
+        width: 30%;   
     }
 
     div#setting> nav{

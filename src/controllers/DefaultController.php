@@ -32,4 +32,30 @@ class DefaultController extends AppController{
         //TODO display addressespage.html
         $this->render('addressespage');
     }
+
+    public function hairdresserspage(){
+        //TODO display hairdresserspage.html
+        $this->render('hairdresserspage');
+    }
+
+    public function makeupartistspage(){
+        //TODO display makeupartistspage.html
+        $this->render('makeupartistspage');
+    }
+
+    public function barberspage(){
+        //TODO display barberspage.html
+        $this->render('barberspage');
+    }
+
+    public function nailsstylistspage(){
+        //TODO display nailstylistspage.html
+        $this->render('nailsstylistspage');
+    }
+
+    public function eyebrowstylistspage(){
+        //TODO display eyebrowstylistspage.html
+        $this->render('eyebrowstylistspage');
+    }
+    
 }
