@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>MAKE-UP ARTISTS PAGE</title>
+    <title>BARBERS PAGE</title>
 </head>
 <body>
     <div class="container-base">
         <header>
             <img src="public/img/logo.svg">
             <div id="icon">
-                <img src="public/img/profile.svg">
-                <i class="fas fa-home"></i>
-                <i class="fas fa-cog"></i>
+                <a ><img src="public/img/profile.svg"></i></a>
+                <a href="homepage"><i class="fas fa-home"></i></i></a>
+                <a href="settingpage"><i class="fas fa-cog"></i></i></a>
             </div>
         </header>
         <div id="main">
             <nav>
                 <ul>
                     <li>
-                        <a href="#" class="button">Fryzjerzy</a>
+                        <a href="hairdresserspage" class="button">Fryzjerzy</a>
                     </li>
                     <li>
-                        <a href="#" class="button">Makijażyści</a>
+                        <a href="makeupartistspage" class="button">Makijażyści</a>
                     </li>
                     <li>
-                        <a href="#" class="button">Barberzy</a>
+                        <a href="barberspage" class="button">Barberzy</a>
                     </li>
                     <li>
-                        <a id="two_line" href="#" class="button">Styliści paznokci</a>
+                        <a id="two_line" href="nailsstylistspage" class="button">Styliści paznokci</a>
                     </li>
                     <li>
-                        <a id="two_line" href="#" class="button">Styliści brwi</a>
+                        <a id="two_line" href="eyebrowstylistspage" class="button">Styliści brwi</a>
                     </li>
                 </ul>
             </nav>
@@ -44,13 +45,13 @@
                     <input id="s2" type="date" placeholder="Kiedy">
                     <input id="s" type="submit" value="Szukaj">
                 </div>
-                <h4>Makijażyści</h4>
+                <h4>Barberzy</h4>
                 <section class="recommendeds">
                     <div id="recommended1">
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
@@ -63,7 +64,7 @@
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
@@ -76,7 +77,7 @@
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
@@ -89,7 +90,7 @@
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
@@ -102,7 +103,7 @@
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
@@ -115,7 +116,7 @@
                         <img src="public/img/recommended1.svg">
                         <div>
                             <h2>Imię Nazwisko</h2>
-                            <h3>Makijażysta</h3>
+                            <h3>Barber</h3>
                             <p>Opis</p>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>

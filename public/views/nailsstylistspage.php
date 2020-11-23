@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>NAILSSTYLISTS PAGE</title>
 </head>
@@ -9,28 +10,28 @@
         <header>
             <img src="public/img/logo.svg">
             <div id="icon">
-                <img src="public/img/profile.svg">
-                <i class="fas fa-home"></i>
-                <i class="fas fa-cog"></i>
+                <a ><img src="public/img/profile.svg"></i></a>
+                <a href="homepage"><i class="fas fa-home"></i></i></a>
+                <a href="settingpage"><i class="fas fa-cog"></i></i></a>
             </div>
         </header>
         <div id="main">
             <nav>
                 <ul>
                     <li>
-                        <a href="#" class="button">Fryzjerzy</a>
+                        <a href="hairdresserspage" class="button">Fryzjerzy</a>
                     </li>
                     <li>
-                        <a href="#" class="button">Makijażyści</a>
+                        <a href="makeupartistspage" class="button">Makijażyści</a>
                     </li>
                     <li>
-                        <a href="#" class="button">Barberzy</a>
+                        <a href="barberspage" class="button">Barberzy</a>
                     </li>
                     <li>
-                        <a id="two_line" href="#" class="button">Styliści paznokci</a>
+                        <a id="two_line" href="nailsstylistspage" class="button">Styliści paznokci</a>
                     </li>
                     <li>
-                        <a id="two_line" href="#" class="button">Styliści brwi</a>
+                        <a id="two_line" href="eyebrowstylistspage" class="button">Styliści brwi</a>
                     </li>
                 </ul>
             </nav>

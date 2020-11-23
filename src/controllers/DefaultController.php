@@ -4,13 +4,18 @@ require_once 'AppController.php';
 
 class DefaultController extends AppController{
     public function firstpage(){
-        //TODO display firstpage.html
+        //TODO display firstpage.php
         $this->render('firstpage');
     }
 
     public function login(){
-        //TODO display login.html
+        //TODO display login.php
         $this->render('login');
+    }
+
+    public function register(){
+        //TODO display register.php
+        $this->render('register');
     }
 
     public function homepage(){
@@ -19,42 +24,42 @@ class DefaultController extends AppController{
     }
 
     public function settingpage(){
-        //TODO display settingpage.html
+        //TODO display settingpage.php
         $this->render('settingpage');
     }
 
     public function favouritepage(){
-        //TODO display favouritepage.html
+        //TODO display favouritepage.php
         $this->render('favouritepage');
     }
 
     public function addressespage(){
-        //TODO display addressespage.html
+        //TODO display addressespage.php
         $this->render('addressespage');
     }
 
     public function hairdresserspage(){
-        //TODO display hairdresserspage.html
+        //TODO display hairdresserspage.php
         $this->render('hairdresserspage');
     }
 
     public function makeupartistspage(){
-        //TODO display makeupartistspage.html
+        //TODO display makeupartistspage.php
         $this->render('makeupartistspage');
     }
 
     public function barberspage(){
-        //TODO display barberspage.html
+        //TODO display barberspage.php
         $this->render('barberspage');
     }
 
     public function nailsstylistspage(){
-        //TODO display nailstylistspage.html
+        //TODO display nailstylistspage.php
         $this->render('nailsstylistspage');
     }
 
     public function eyebrowstylistspage(){
-        //TODO display eyebrowstylistspage.html
+        //TODO display eyebrowstylistspage.php
         $this->render('eyebrowstylistspage');
     }
     
