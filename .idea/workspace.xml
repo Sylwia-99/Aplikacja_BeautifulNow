@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0ce7e55-c72f-486e-b0df-6d488a9edf44" name="Default Changelist" comment="&quot; &quot;">
-      <change beforePath="$PROJECT_DIR$/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/Routing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/addressespage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/addressespage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/barberspage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/barberspage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/eyebrowstylistspage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/eyebrowstylistspage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/favouritepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/favouritepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/firstpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/firstpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/hairdresserspage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/hairdresserspage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/makeupartistspage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/makeupartistspage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/nailsstylistspage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/nailsstylistspage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/settingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/settingpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Aplikacja.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +50,7 @@
       <workItem from="1606124940612" duration="40000" />
       <workItem from="1606124983369" duration="752000" />
       <workItem from="1606154752317" duration="2045000" />
-      <workItem from="1606156815883" duration="1236000" />
+      <workItem from="1606156815883" duration="2158000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;&quot;">
       <created>1606080441345</created>
