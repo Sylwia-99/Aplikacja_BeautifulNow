@@ -43,7 +43,7 @@ form{
 button{
     background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #FFFFFF;
+    #border: 1px solid #FFFFFF;
     border-radius: 70px;
 
     width: 50%;
@@ -82,7 +82,7 @@ i:hover{
 
 input{
     background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FCFAFA;
+    #border: 1px solid #FCFAFA;
     border-radius: 70px;
     text-align: left;
     font: normal normal normal 1em Segoe Script;
@@ -134,8 +134,8 @@ header {
     display: flex;
     align-items: center;
     background: transparent linear-gradient(180deg, #6E1F75 0%, #2E0A33B8 59%, #38123B 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FFFFFF;
-    border-radius: 0 0 25px 25px;
+    #border: 1px solid #FFFFFF;
+    #border-radius: 0 0 25px 25px;
 }
 
 header>img {
@@ -174,7 +174,7 @@ nav {
     width: 20vw;
     height: 79vh;
     background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FCF9F9;
+    #border: 1px solid #FCF9F9;
     border-radius: 5em;
     margin-top: 0.2em;
 }
@@ -191,7 +191,7 @@ a {
 
 .button {
     background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FCFAFA;
+    #border: 1px solid #FCFAFA;
     border-radius: 8em;
     letter-spacing: 0.9px;
     color: #FFFFFF;
@@ -367,7 +367,7 @@ div#setting-favourite{
     display: flex;
     flex-direction: row;
     background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FCF9F9;
+    #border: 1px solid #FCF9F9;
     border-radius: 90px;
     width: 98vw;
     height: 79.7%;
@@ -451,7 +451,7 @@ div#favourite1> img{
 div#favourite1 .button{
     width: 5em;
     background: #411743 0% 0% no-repeat padding-box;
-    border: 2px solid #FEFAFA;
+    #border: 2px solid #FEFAFA;
     border-radius: 20px;
 }
 
