@@ -12,6 +12,7 @@ Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::get('settingpage', 'DefaultController');
 Routing::get('favouritepage', 'DefaultController');
+Routing::get('historypage', 'DefaultController');
 Routing::get('addressespage', 'DefaultController');
 Routing::get('hairdresserspage', 'DefaultController');
 Routing::get('makeupartistspage', 'DefaultController');

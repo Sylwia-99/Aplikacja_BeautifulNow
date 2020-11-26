@@ -228,4 +228,17 @@
     li{
         margin-bottom: 1em;
     }
+
+    div#history1 div{
+        width: 8em;
+    }
+    div#history1 div#data{
+        width: 3em;
+    }
+
+    a#again {
+        width: 20vw;
+        height: 1.5vh;
+        font: normal normal normal 18px/28px Segoe Script;
+    }
 }

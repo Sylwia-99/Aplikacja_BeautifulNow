@@ -22,19 +22,16 @@
                 </div>
                 <ul id="f">
                     <li>
-                        <a href="hairdresserspage" class="button">Fryzjerzy</a>
+                        <a id="f" href="favouritepage" class="button"><i class="fas fa-heart"></i> Ulubione</a>
                     </li>
                     <li>
-                        <a href="makeupartistspage" class="button">Makijażyści</a>
+                        <a id="f" href="#" class="button"><i class="fas fa-history"></i> Historia Usług</a>
                     </li>
                     <li>
-                        <a href="barberspage" class="button">Barberzy</a>
+                        <a id="f" href="addressespage" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
                     </li>
                     <li>
-                        <a id="two_line" href="nailsstylistspage" class="button">Styliści paznokci</a>
-                    </li>
-                    <li>
-                        <a id="two_line" href="eyebrowstylistspage" class="button">Styliści brwi</a>
+                        <a id="f" href="login" class="button"><i class="fas fa-sign-out-alt"></i> Wyloguj</a>
                     </li>
                 </ul>
             </nav>

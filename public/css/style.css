@@ -549,3 +549,25 @@ div#find input#s[type="submit"]{
     position: relative;
     border-radius:0px 70px 70px 0px;
 }
+
+section#history.favourites{
+    grid-template-columns: 1fr;
+}
+
+div#history1{
+    display: flex;
+    align-items: center;
+    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+div#history1 div{
+    margin: 1em;
+    width: 30em;
+}
+
+div#history1 div#data{
+    margin: 1em;
+    width: 8em;
+}

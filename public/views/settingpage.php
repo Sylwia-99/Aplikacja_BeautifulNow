@@ -25,7 +25,7 @@
                         <a id="s" href="favouritepage" class="button"><i class="fas fa-heart"></i>Ulubione</a>
                     </li>
                     <li>
-                        <a id="s" href="#" class="button"><i class="fas fa-history"></i>Historia Usług</a>
+                        <a id="s" href="historypage" class="button"><i class="fas fa-history"></i>Historia Usług</a>
                     </li>
                     <li>
                         <a id="s" href="addressespage" class="button"><i class="fas fa-location-arrow"></i>Adresy</a>

@@ -33,6 +33,11 @@ class DefaultController extends AppController{
         $this->render('favouritepage');
     }
 
+    public function historypage(){
+        //TODO display historypage.php
+        $this->render('historypage');
+    }
+
     public function addressespage(){
         //TODO display addressespage.php
         $this->render('addressespage');
