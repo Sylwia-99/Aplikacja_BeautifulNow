@@ -77,6 +77,11 @@
         margin: 0
     }
 
+    div#find{
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+
     div#find input[type="search"]{
         width: 100%;
         height: 3em;
@@ -99,6 +104,11 @@
     div#find input#s[type="submit"]{
         left: -1.5%;
         width: 30%;
+    }
+
+    h4{
+        margin-left: 1em;
+        font-size: 1.3em;
     }
 
     div#setting> nav{
@@ -169,6 +179,10 @@
         margin: 1em;
     }
 
+    div#description{
+        margin-top: 3em;
+    }
+
     div#description i {
         font-size: 2em;
         margin: 0.3em;
@@ -178,9 +192,15 @@
         height: auto;
     }
 
+    .favourites{
+        position: relative;
+        left: -7em;
+        width: 2em;
+    }
+
     div#favourite1{
-        height: 15em;
-        width: 13em;
+        width: 15em;
+        height: 20em;
     }
 
     div#favourite1 .button{
@@ -239,5 +259,54 @@
         width: 20vw;
         height: 1.5vh;
         font: normal normal normal 18px/28px Segoe Script;
+    }
+
+    #recommended1{
+        width: 21em;
+    }
+
+    .glide.glide--ltr.glide--carousel.glide--swipeable{
+        margin-top:2em;
+        width: 21em;
+    }
+
+    .glide__slide.glide__slide--clone{
+        width: 400%;
+        height: 300%;
+    }
+
+    div.glide__arrows{
+        position: relative;
+        display: flex;
+        bottom: 9.5em;
+    }
+
+    .glide__arrow.glide__arrow--left{
+        height: 2em;
+        margin-right: 6em;
+    }
+
+    .glide__arrow.glide__arrow--right{
+        height: 2em;
+        margin-left: 6em;
+    }
+
+    #f.glide__arrow.glide__arrow--left{
+        height: 2em;
+        margin-right: 4em;
+    }
+
+    #f.glide__arrow.glide__arrow--right{
+        height: 2em;
+        margin-left: 4em;
+    }
+
+    div#invitation{
+        margin-top:4em;
+    }
+
+    #f.glide.glide--ltr.glide--carousel.glide--swipeable {
+        margin-top: 4em;
+        width: 15em;
     }
 }

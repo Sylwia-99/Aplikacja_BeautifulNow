@@ -5,7 +5,8 @@ body{
 .container{
     width: 100vw;
     height: 100vh;
-    background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
+    #background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
 
     display: flex;
     flex-direction: column;
@@ -35,7 +36,8 @@ form{
     align-items: center;
     width: 80%;
     height: 75vh;
-    background: transparent linear-gradient(180deg, #6A2570 0%, #351338 100%) 0% 0% no-repeat padding-box;
+    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
+    #background: transparent linear-gradient(180deg, #6A2570 0%, #351338 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #FFFFFF;
     border-radius: 90px;
 }
@@ -120,8 +122,8 @@ text#register{
 
 .container-base{
     height: 100vh;
-    background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-
+    #background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    background: #38143b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,11 +133,9 @@ text#register{
 header {
     height: 19vh;
     width: 99.9vw;
+    background: #5e1a65 linear-gradient(180deg, #2a0e2d 0%, #622367 50%, #3a133d 100%) 0% 0% no-repeat padding-box;
     display: flex;
     align-items: center;
-    background: transparent linear-gradient(180deg, #6E1F75 0%, #2E0A33B8 59%, #38123B 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FFFFFF;
-    #border-radius: 0 0 25px 25px;
 }
 
 header>img {
@@ -172,11 +172,12 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     width: 20vw;
-    height: 79vh;
-    background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FCF9F9;
-    border-radius: 5em;
-    margin-top: 0.2em;
+    height:81vh;
+    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
+    #background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
+    #background: #622367;
+    #border-radius: 5em;
+    #margin-top: 0.2em;
 }
 
 a {
@@ -212,7 +213,7 @@ ul {
     color: #FFFFFF;
     height: 100%;
     width: calc(100% - 40px);
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
 
 }
@@ -227,7 +228,7 @@ li {
 main {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80vw;
 }
 
 section {
@@ -361,13 +362,15 @@ div#setting-favourite>nav{
     background: transparent;
     border: none;
     width: 55vw;
+    height: 80vh;
 }
 
 div#setting-favourite{
     display: flex;
     flex-direction: row;
-    background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FCF9F9;
+    #background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
+    #background: #622367;
+    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
     border-radius: 90px;
     width: 98vw;
     height: 79.7%;
@@ -439,8 +442,9 @@ div#favourite1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FFFFFF;
+    background: transparent linear-gradient(180deg, #a162a5 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    #background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    #border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
@@ -557,8 +561,9 @@ section#history.favourites{
 div#history1{
     display: flex;
     align-items: center;
-    background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FFFFFF;
+    background: transparent linear-gradient(180deg, #a162a5 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    #background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
+    #border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
@@ -570,4 +575,63 @@ div#history1 div{
 div#history1 div#data{
     margin: 1em;
     width: 8em;
+}
+
+#recommended1{
+    text-align: start;
+}
+
+ul.glide__slides{
+    display: flex;
+    flex-direction: row;
+}
+
+.glide.glide--ltr.glide--carousel.glide--swipeable{
+    overflow: hidden;
+}
+
+div.glide__arrows{
+    position: relative;
+    display: flex;
+    bottom: 20em;
+}
+
+.glide__arrow.glide__arrow--left{
+    background: transparent;
+    width: 5em;
+    margin-right: 33em;
+}
+
+.glide__arrow.glide__arrow--right{
+    background: transparent;
+    width: 5em;
+    margin-left: 33em;
+}
+
+.favourites{
+    width: 50em;
+    #height: 20em;
+}
+
+#favourite1{
+    height: 40em;
+    width: 25em;
+}
+
+#f.glide__arrow.glide__arrow--left{
+    margin-right: 21em;
+}
+
+#f.glide__arrow.glide__arrow--right{
+    margin-left: 21em;
+}
+
+#f.glide__track{
+    height: 26em;
+}
+
+#f.glide__arrows{
+    position: relative;
+    display: flex;
+    bottom: 15em;
 }

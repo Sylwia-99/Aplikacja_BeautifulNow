@@ -3,6 +3,8 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
     <title>NAILSSTYLISTS PAGE</title>
 </head>
 <body>
@@ -46,85 +48,60 @@
                     <input id="s" type="submit" value="Szukaj">
                 </div>
                 <h4>Stylisci paznokci</h4>
-                <section class="recommendeds">
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div id="recommended1">
+                                    <img src="public/img/recommended1.svg">
+                                    <div>
+                                        <h2>Imię Nazwisko</h2>
+                                        <h3>Stylista Paznokci</h3>
+                                        <p>Opis</p>
+                                        <div id="social-section">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-twitter"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div id="recommended1">
+                                    <img src="public/img/recommended1.svg">
+                                    <div>
+                                        <h2>Imię Nazwisko</h2>
+                                        <h3>Stylista Paznokci</h3>
+                                        <p>Opis</p>
+                                        <div id="social-section">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-twitter"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
                         </div>
+                        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+                        <script>
+                            const config = {
+                                type: 'carousel',
+                                perView:3,
+                                breakpoints:{
+                                    1024:{
+                                        perView: 1
+                                    },
+                                    600:1
+                                }
+                            }
+                            new Glide('.glide', config).mount()
+                        </script>
                     </div>
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="recommended1">
-                        <img src="public/img/recommended1.svg">
-                        <div>
-                            <h2>Imię Nazwisko</h2>
-                            <h3>Stylista paznokci</h3>
-                            <p>Opis</p>
-                            <div id="social-section">
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                        </div>
-                    </div>
+                </div>
             </main>
         </div>
     </div>
