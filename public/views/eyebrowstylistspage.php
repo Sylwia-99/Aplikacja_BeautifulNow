@@ -8,7 +8,7 @@
 <body>
     <div class="container-base">
         <header>
-            <img src="public/img/logo.svg">
+            <img src="public/img/Logo.png">
             <div id="icon">
                 <a ><img src="public/img/profile.svg"></i></a>
                 <a href="homepage"><i class="fas fa-home"></i></i></a>

@@ -16,7 +16,7 @@
     }
 
     .logo>img{
-        height: 13em;
+        width: 70vw;
         margin: 1em;
     }
 
@@ -26,7 +26,6 @@
 
     header>img{
         width: 14em;
-        height: 100%;
         margin: 0;
     }
 
