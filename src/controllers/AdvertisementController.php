@@ -11,7 +11,7 @@ class AdvertisementController extends AppController
 
     private $messages = [];
 
-    public function addAdvertisement()
+    public function addadvertisementpage()
     {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])){
 

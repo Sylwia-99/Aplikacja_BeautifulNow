@@ -240,7 +240,7 @@ section {
 }
 
 div#recommended1>img{
-    height: 60%;
+    height: 20em;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
@@ -645,6 +645,8 @@ button.button\.edit-adress {
     margin: 1em;
     width: 98vw;
     align-items: center;
+    border: none;
+    background: transparent;
 }
 
 .add-advertisement-container input{

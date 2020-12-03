@@ -74,7 +74,8 @@
     }
 
     div#recommended1>img{
-        margin: 0
+        margin: 0;
+        height: 16em;
     }
 
     div#find{
@@ -268,7 +269,8 @@
     }
 
     #recommended1{
-        width: 21em;
+        width: 18em;
+        height: 22em;
     }
 
     .glide.glide--ltr.glide--carousel.glide--swipeable{

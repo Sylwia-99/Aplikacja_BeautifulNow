@@ -13,11 +13,11 @@
             <a ><img src="public/img/profile.svg"></i></a>
             <a href="homepage"><i class="fas fa-home"></i></a>
             <a href="settingpage"><i class="fas fa-cog"></i></a>
-            <a href="addAdvertisement"><i class="fas fa-plus"></i></a>
+            <a href="addadvertisementpage"><i class="fas fa-plus"></i></a>
         </div>
     </header>
     <div id="setting-favourite">
-        <div class="add-advertisement-container" action="addAdvertisement" method="POST" ENCTYPE="multipart/form-data">
+        <form class="add-advertisement-container" action="addadvertisementpage" method="POST" ENCTYPE="multipart/form-data">
             <div class="message" style="color: white; font: normal normal normal 0.8em Segoe Script;">
                 <?php if(isset($messages)){
                     foreach ($messages as $message) {
@@ -47,7 +47,7 @@
             <input type="button" id="loadFileXml" value="Dodaj Zdjęcie" onclick="document.getElementById('file').click();" />
             <input type="file" name="file" id="file" accept="image/phg, image/jpeg" style="display:none;"/>
             <button id="zr" type="submit">Dodaj Ogłoszenie</button>
-        </div>
+        </form>
     </div>
 </div>
 </body>

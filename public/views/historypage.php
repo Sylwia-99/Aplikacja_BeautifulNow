@@ -13,7 +13,7 @@
             <a ><img src="public/img/profile.svg"></i></a>
             <a href="homepage"><i class="fas fa-home"></i></a>
             <a href="settingpage"><i class="fas fa-cog"></i></a>
-            <a href="addAdvertisement"><i class="fas fa-plus"></i></a>
+            <a href="addadvertisementpage"><i class="fas fa-plus"></i></a>
         </div>
     </header>
     <div id="setting-favourite">
