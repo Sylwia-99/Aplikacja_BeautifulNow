@@ -11,8 +11,9 @@
             <img src="public/img/Logo.png">
             <div id="icon">
                 <a ><img src="public/img/profile.svg"></i></a>
-                <a href="homepage"><i class="fas fa-home"></i></i></a>
-                <a href="settingpage"><i class="fas fa-cog"></i></i></a>
+                <a href="homepage"><i class="fas fa-home"></i></a>
+                <a href="settingpage"><i class="fas fa-cog"></i></a>
+                <a href="addAdvertisement"><i class="fas fa-plus"></i></a>
             </div>
         </header>
         <div id="setting-favourite">
@@ -25,7 +26,7 @@
                         <a id="f" href="favouritepage" class="button"><i class="fas fa-heart"></i> Ulubione</a>
                     </li>
                     <li>
-                        <a id="f" href="#" class="button"><i class="fas fa-history"></i> Historia Usług</a>
+                        <a id="f" href="historypage" class="button"><i class="fas fa-history"></i> Historia Usług</a>
                     </li>
                     <li>
                         <a id="f" href="addressespage" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
@@ -50,20 +51,9 @@
                 <hr/>
                 <div id="addresses">
                     <h2>Adresy</h2>
-                    <a id="d" href="#" class="button"> Dodaj Adres</a>
+                    <button class="button.edit-adress" data-address-mode="addaddress"> Dodaj Adres</button>
                     <section class="added">
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
-                        <h4>Sąspów</h4>
+                        <p>Twoja lista adresowa jest pusta</p>
                     </section>
                 </div>
         </div>

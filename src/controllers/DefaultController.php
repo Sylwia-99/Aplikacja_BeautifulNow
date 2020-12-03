@@ -67,5 +67,14 @@ class DefaultController extends AppController{
         //TODO display eyebrowstylistspage.php
         $this->render('eyebrowstylistspage');
     }
+
+    public function addadvertisementpage(){
+        //TODO display addadvertisementpage.php
+        $this->render('addadvertisementpage');
+    }
+    public function advertisementpage(){
+        //TODO display advertisementpage.php
+        $this->render('advertisementpage');
+    }
     
 }

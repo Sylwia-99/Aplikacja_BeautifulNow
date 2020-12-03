@@ -23,14 +23,27 @@ class SecurityController extends AppController
             return $this->render('login', ["messages" => ["WRONG PASSWORD!"]]);
         }
 
-        //return $this->render('homepage');
+        setcookie('email', $email, time()+60);
+
+        //return $this->render('homepage', ['messages' => ['Hellow'.$email]]);
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/homepage");
     }
 
-    public function register(){
+    public function logout(){
+        session_start();
+        session_destroy();
+        echo "You session";
 
+        //return $this->render('homepage', ['messages' => ['Hellow'.$email]]);
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
+    }
+
+    public function register(){
+        $user = new User();
         if(!$this->isPost()){
             return $this->render('register');
         }

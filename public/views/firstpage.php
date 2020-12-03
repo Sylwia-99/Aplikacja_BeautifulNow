@@ -13,9 +13,10 @@
         <header>
             <img src="public/img/Logo.png">
             <div id="icon">
-                <a href="login"><i class="fas fa-user-friends"></i></a>
-                <a href="homepage"><i class="fas fa-home"></i></i></a>
-                <a href="settingpage"><i class="fas fa-cog"></i></i></a>
+                <a ><img src="public/img/profile.svg"></i></a>
+                <a href="homepage"><i class="fas fa-home"></i></a>
+                <a href="settingpage"><i class="fas fa-cog"></i></a>
+                <a href="addAdvertisement"><i class="fas fa-plus"></i></a>
             </div>
         </header>
         <div id="main">

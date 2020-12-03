@@ -19,5 +19,8 @@ Routing::get('makeupartistspage', 'DefaultController');
 Routing::get('barberspage', 'DefaultController');
 Routing::get('nailsstylistspage', 'DefaultController');
 Routing::get('eyebrowstylistspage', 'DefaultController');
+Routing::post('addAdvertisement', 'AdvertisementController');
+Routing::get('advertisementpage', 'DefaultController');
+
 
 Routing::run($path);

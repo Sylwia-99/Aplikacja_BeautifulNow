@@ -635,3 +635,50 @@ div.glide__arrows{
     display: flex;
     bottom: 15em;
 }
+
+button.button\.edit-adress {
+    width: 10em;
+}
+.add-advertisement-container{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 98vw;
+    align-items: center;
+}
+
+.add-advertisement-container input{
+    margin-top: 0em;
+    height: 3.5vh;
+}
+
+#name-surname{
+    display: flex;
+}
+
+#name{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    margin-right: 1em;
+    margin-left: 0;
+}
+
+#surname{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    margin-right: 0;
+    margin-left: 1em;
+}
+
+#name input, #surname input{
+    margin-left: 0;
+    width: 95%;
+}
+
+#loadFileXml{
+    margin-top: 0.5em;
+    height: 5vh;
+    width: 8.5em;
+}
