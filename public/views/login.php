@@ -11,7 +11,7 @@
                 <div class="logo">
                     <img src="public/img/Logo.png">
                 </div>
-                <div class="message" style="color: white; font: normal normal normal 0.8em Segoe Script;">
+                <div class="message" style="color: turquoise;font: normal normal normal 2em Segoe Script;">
                     <?php if(isset($messages)){
                         foreach ($messages as $message) {
                             echo $message;

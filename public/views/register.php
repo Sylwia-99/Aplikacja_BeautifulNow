@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="login-container">
+        <div class="register-container">
             <form class="register" action="register" method="POST">
                 <div class="logo">
                     <img src="public/img/Logo.png">
@@ -27,8 +27,12 @@
                 <input id="register" name="email" type="text">
                 <text id="register">Hasło</text>
                 <input id="register" name="password" type="password">
+                <text id="register">Powtórz Hasło</text>
+                <input id="register" name="confirmedPassword" type="password">
+                <text id="register">Telefon</text>
+                <input id="register" name="phone" type="text">
+                <button id="zr" type="submit">Zarejestruj się</button>
             </form>
         </div>
-        <button id="zr" type="submit">Zarejestruj się</button>
     </div>
 </body>

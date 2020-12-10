@@ -6,20 +6,27 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
+
+    private $userRepository;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
+
     public function login(){
-        $userRepository = new UserRepository();
 
         if(!$this->isPost()){
             return $this->render('login');
         }
 
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $password = md5($_POST["password"]);
 
-        $user = $userRepository->getUser($email);
+        $user = $this->userRepository->getUser($email);
 
         if(!$user){
-            return $this->render( "login", ["messages" => ['User not exist!']]);
+            return $this->render( 'login', ["messages" => ['User not exist!']]);
         }
 
         if($user->getEmail() != $email){
@@ -50,7 +57,7 @@ class SecurityController extends AppController
     }
 
     public function register(){
-        $user = new User();
+
         if(!$this->isPost()){
             return $this->render('register');
         }
@@ -59,8 +66,20 @@ class SecurityController extends AppController
         $surname = $_POST["surname"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
-        echo $password_hash;exit();
+        $confirmedPassword = $_POST['confirmedPassword'];
+        //$password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $phone= $_POST['phone'];
+
+        if($password !== $confirmedPassword){
+            return $this->render("register", ["messages" => ["Please provide proper password!"]]);
+        }
+
+        $user = new User($email, md5($password), $name, $surname);
+        $user->setPhone($phone);
+
+        $this->userRepository->addUser($user);
+
+        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
     }
 
