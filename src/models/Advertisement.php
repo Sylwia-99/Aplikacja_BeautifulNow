@@ -6,18 +6,22 @@ class Advertisement
     private $name;
     private $surname;
     private $job;
+    private $description;
     private $address;
     private $telephone;
     private $image;
+    private $date;
 
-    public function __construct($name, $surname, $job, $address, $telephone, $image)
+    public function __construct($name, $surname, $job, $description, $address, $telephone, $image, $date)
     {
         $this->name = $name;
         $this->surname = $surname;
         $this->job = $job;
+        $this->description = $description;
         $this->address = $address;
         $this->telephone = $telephone;
         $this->image = $image;
+        $this->date = $date;
     }
 
     public function getName()
@@ -38,6 +42,16 @@ class Advertisement
     public function setSurname($surname): void
     {
         $this->surname = $surname;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setDescription($description): void
+    {
+        $this->description = $description;
     }
 
     public function getJob()
@@ -78,5 +92,15 @@ class Advertisement
     public function setImage($image): void
     {
         $this->image = $image;
+    }
+
+    public function getDate()
+    {
+        return $this->image;
+    }
+
+    public function setDate($date): void
+    {
+        $this->date = $date;
     }
 }

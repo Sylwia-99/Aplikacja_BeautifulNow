@@ -23,6 +23,7 @@ class SecurityController extends AppController
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
 
+
         $user = $this->userRepository->getUser($email);
 
         if(!$user){
@@ -37,21 +38,25 @@ class SecurityController extends AppController
             return $this->render('login', ["messages" => ["WRONG PASSWORD!"]]);
         }
 
-        setcookie('email', $email, time()+60);
-
+        $cookie_name = 'user';
+        $cookie_value = $_POST["email"];
+        setcookie($cookie_name, $cookie_value, time()+60);
+        //session_start();
+        //echo "You session";
         //return $this->render('homepage', ['messages' => ['Hellow'.$email]]);
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/homepage");
+        if(isset($_COOKIE['user'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/homepage");
+        }
+        //$url = "http://$_SERVER[HTTP_HOST]";
+        //header("Location: {$url}/login");
     }
 
     public function logout(){
-        session_start();
-        session_destroy();
-        echo "You session";
+        //session_destroy();
 
-        //return $this->render('homepage', ['messages' => ['Hellow'.$email]]);
-
+        //setcookie($cookie_name, $cookie_value, time()-6);
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/login");
     }

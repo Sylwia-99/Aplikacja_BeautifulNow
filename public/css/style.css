@@ -659,6 +659,7 @@ button.button\.edit-adress {
 
 .add-advertisement-container input{
     margin-top: 0em;
+    margin-bottom: 0.2em;
     height: 3.5vh;
 }
 
@@ -669,7 +670,7 @@ button.button\.edit-adress {
 #name{
     display: flex;
     flex-direction: column;
-    width: 30em;
+    width: 30vw;
     margin-right: 1em;
     margin-left: 0;
 }
@@ -677,7 +678,7 @@ button.button\.edit-adress {
 #surname{
     display: flex;
     flex-direction: column;
-    width: 30em;
+    width: 30vw;
     margin-right: 0;
     margin-left: 1em;
 }

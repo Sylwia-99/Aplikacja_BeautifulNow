@@ -38,6 +38,8 @@
             </div>
             <text>Zawód</text>
             <input name="job" type="text">
+            <text>Opis</text>
+            <input name="description" type="text">
             <text>Data</text>
             <input name="date" type="date">
             <text>Adres</text>

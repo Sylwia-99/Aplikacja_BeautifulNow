@@ -58,22 +58,8 @@
                                 <div>
                                     <h2><?= $advertisement->getName()." ".$advertisement->getSurname()?></h2>
                                     <h3><?= $advertisement->getJob()?></h3>
-                                    <p><?= $advertisement->getTelephone()?></p>
-                                    <div id="social-section">
-                                        <i class="fab fa-instagram"></i>
-                                        <i class="fab fa-twitter"></i>
-                                        <i class="fab fa-facebook-f"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div id="recommended1">
-                                <img src="public/uploads/<?= $advertisement->getImage()?>">
-                                <div>
-                                    <h2><?$advertisement->getName()." ".$advertisement->getSurname()?></h2>
-                                    <h3><?$advertisement->getJob()?></h3>
-                                    <p><?$advertisement->getTelephone()?></p>
+                                    <p><?= $advertisement->getDescription()?></p>
+                                    <h3><?= $advertisement->getTelephone()?></h3>
                                     <div id="social-section">
                                         <i class="fab fa-instagram"></i>
                                         <i class="fab fa-twitter"></i>

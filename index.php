@@ -10,6 +10,7 @@ Routing::get('firstpage', 'DefaultController');
 Routing::get('homepage', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
+#Routing::post('logout', 'SecurityController');
 Routing::get('settingpage', 'DefaultController');
 Routing::get('favouritepage', 'DefaultController');
 Routing::get('historypage', 'DefaultController');

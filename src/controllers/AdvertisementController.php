@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Advertisement.php';
+require_once __DIR__.'/../repository/AdvertisementRepository.php';
 
 class AdvertisementController extends AppController
 {
@@ -10,6 +11,13 @@ class AdvertisementController extends AppController
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $messages = [];
+    private $advertisementRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->advertisementRepository = new AdvertisementRepository();
+    }
 
     public function addadvertisementpage()
     {
@@ -20,7 +28,8 @@ class AdvertisementController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            $advertisement = new Advertisement($_POST['name'], $_POST['surname'], $_POST['job'], $_POST['address'], $_POST['telephone'], $_FILES['file']['name']);
+            $advertisement = new Advertisement($_POST['name'], $_POST['surname'], $_POST['job'], $_POST['description'], $_POST['address'], $_POST['telephone'], $_FILES['file']['name'], $_POST['date']);
+            $this->advertisementRepository->addAdvertisement($advertisement);
 
             return $this->render('advertisementpage', ['messages'=> $this ->messages, 'advertisement' => $advertisement]);
         }
