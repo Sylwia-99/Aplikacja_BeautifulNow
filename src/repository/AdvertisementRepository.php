@@ -53,4 +53,31 @@ class AdvertisementRepository extends Repository
             $advertisement->getDate()
         ]);
     }
+
+    public function getAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements
+        ');
+
+        $stmt->execute();
+        $advertisementpage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($advertisementpage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
 }

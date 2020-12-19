@@ -96,7 +96,7 @@ class Advertisement
 
     public function getDate()
     {
-        return $this->image;
+        return $this->date;
     }
 
     public function setDate($date): void

@@ -52,14 +52,15 @@
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
+                        <?php foreach ($advertisementpage as $advertisement): ?>
                         <li class="glide__slide">
                             <div id="recommended1">
                                 <img src="public/uploads/<?= $advertisement->getImage()?>">
                                 <div>
-                                    <h2><?= $advertisement->getName()." ".$advertisement->getSurname()?></h2>
-                                    <h3><?= $advertisement->getJob()?></h3>
-                                    <p><?= $advertisement->getDescription()?></p>
-                                    <h3><?= $advertisement->getTelephone()?></h3>
+                                    <h2><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h2>
+                                    <h3><?= $advertisement->getJob(); ?></h3>
+                                    <p><?= $advertisement->getDescription(); ?></p>
+                                    <h3><?= $advertisement->getTelephone(); ?></h3>
                                     <div id="social-section">
                                         <i class="fab fa-instagram"></i>
                                         <i class="fab fa-twitter"></i>
@@ -68,6 +69,7 @@
                                 </div>
                             </div>
                         </li>
+                        <?php endforeach;?>
                     </ul>
                     <div class="glide__arrows" data-glide-el="controls">
                         <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>

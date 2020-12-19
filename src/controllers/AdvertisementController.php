@@ -19,6 +19,25 @@ class AdvertisementController extends AppController
         $this->advertisementRepository = new AdvertisementRepository();
     }
 
+    public function advertisementpage(){
+        //TODO display advertisementpage.php
+        $advertisementpage = $this->advertisementRepository->getAdvertisements();
+        $this->render('advertisementpage', ['advertisementpage' => $advertisementpage]);
+    }
+
+    public function firstpage(){
+        //TODO display firstpage.php
+        $advertisementpage = $this->advertisementRepository->getAdvertisements();
+        $this->render('firstpage', ['advertisementpage' => $advertisementpage]);
+    }
+
+    public function homepage(){
+        //TODO display home.html
+        $advertisementpage = $this->advertisementRepository->getAdvertisements();
+        $this->render('homepage', ['advertisementpage' => $advertisementpage]);
+    }
+
+
     public function addadvertisementpage()
     {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])){
@@ -31,7 +50,9 @@ class AdvertisementController extends AppController
             $advertisement = new Advertisement($_POST['name'], $_POST['surname'], $_POST['job'], $_POST['description'], $_POST['address'], $_POST['telephone'], $_FILES['file']['name'], $_POST['date']);
             $this->advertisementRepository->addAdvertisement($advertisement);
 
-            return $this->render('advertisementpage', ['messages'=> $this ->messages, 'advertisement' => $advertisement]);
+            return $this->render('advertisementpage', [
+                'advertisementpage' => $this->advertisementRepository->getAdvertisements(),
+                'messages'=> $this ->messages, 'advertisement' => $advertisement]);
         }
         return $this ->render('addadvertisementpage',['messages'=> $this -> messages]);
     }
