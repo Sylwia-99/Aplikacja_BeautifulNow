@@ -1,7 +1,5 @@
 # Aplikacja Beautiful Now
 ## Opis zadania
-- TODO:
+- Aplikacja do rezerwowania usługodawców z branży Beauty z dojazdem do domu.
 
-### Testowanie
-1. TODO
 ### Link do repozytorium - https://github.com/Sylwia-99/Aplikacja_BeautifulNow.git
