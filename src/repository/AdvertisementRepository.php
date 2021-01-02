@@ -80,4 +80,139 @@ class AdvertisementRepository extends Repository
 
         return $result;
     }
+
+    public function getHairdresserAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE profession=\'Fryzjer\'
+        ');
+
+        $stmt->execute();
+        $hairdresserspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($hairdresserspage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getMakeUpArtistAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE profession=\'Makijażysta\'
+        ');
+
+        $stmt->execute();
+        $makeupartistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($makeupartistspage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getBarberAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE profession=\'Barber\'
+        ');
+
+        $stmt->execute();
+        $barberspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($barberspage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getNailsStylistAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE profession=\'Stylista paznokci\'
+        ');
+
+        $stmt->execute();
+        $nailsstylistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($nailsstylistspage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getEyebrowsStylistAdvertisements(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE profession=\'Stylista brwi\'
+        ');
+
+        $stmt->execute();
+        $eyebrowstylistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($eyebrowstylistspage as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['job'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date']
+            );
+        }
+
+        return $result;
+    }
 }

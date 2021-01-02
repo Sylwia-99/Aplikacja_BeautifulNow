@@ -37,7 +37,13 @@
                 </div>
             </div>
             <text>Zawód</text>
-            <input name="job" type="text">
+            <select name="job">
+                <option>Fryzjer</option>
+                <option>Makijażysta</option>
+                <option>Barber</option>
+                <option>Stylista paznokci</option>
+                <option>Stylista brwi</option>
+            </select>
             <text>Opis</text>
             <input name="description" type="text">
             <text>Data</text>

@@ -15,11 +15,11 @@ Routing::get('settingpage', 'DefaultController');
 Routing::get('favouritepage', 'DefaultController');
 Routing::get('historypage', 'DefaultController');
 Routing::get('addressespage', 'DefaultController');
-Routing::get('hairdresserspage', 'DefaultController');
-Routing::get('makeupartistspage', 'DefaultController');
-Routing::get('barberspage', 'DefaultController');
-Routing::get('nailsstylistspage', 'DefaultController');
-Routing::get('eyebrowstylistspage', 'DefaultController');
+Routing::get('hairdresserspage', 'AdvertisementController');
+Routing::get('makeupartistspage', 'AdvertisementController');
+Routing::get('barberspage', 'AdvertisementController');
+Routing::get('nailsstylistspage', 'AdvertisementController');
+Routing::get('eyebrowstylistspage', 'AdvertisementController');
 Routing::post('addadvertisementpage', 'AdvertisementController');
 Routing::get('advertisementpage', 'AdvertisementController');
 

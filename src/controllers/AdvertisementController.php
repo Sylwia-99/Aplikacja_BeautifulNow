@@ -20,23 +20,45 @@ class AdvertisementController extends AppController
     }
 
     public function advertisementpage(){
-        //TODO display advertisementpage.php
         $advertisementpage = $this->advertisementRepository->getAdvertisements();
         $this->render('advertisementpage', ['advertisementpage' => $advertisementpage]);
     }
 
     public function firstpage(){
-        //TODO display firstpage.php
         $advertisementpage = $this->advertisementRepository->getAdvertisements();
         $this->render('firstpage', ['advertisementpage' => $advertisementpage]);
     }
 
     public function homepage(){
-        //TODO display home.html
         $advertisementpage = $this->advertisementRepository->getAdvertisements();
         $this->render('homepage', ['advertisementpage' => $advertisementpage]);
     }
 
+    public function hairdresserspage(){
+        $hairdresserspage = $this->advertisementRepository->getHairdresserAdvertisements();
+        $this->render('hairdresserspage', ['hairdresserspage' => $hairdresserspage]);
+    }
+
+    public function makeupartistspage(){
+        $makeupartistspage = $this->advertisementRepository->getMakeUpArtistAdvertisements();
+        $this->render('makeupartistspage', ['makeupartistspage' => $makeupartistspage]);
+    }
+
+    public function barberspage(){
+        $barberspage = $this->advertisementRepository->getBarberAdvertisements();
+        $this->render('barberspage', ['barberspage' => $barberspage]);
+    }
+
+    public function nailsstylistspage(){
+        $nailsstylistspage = $this->advertisementRepository->getNailsStylistAdvertisements();
+        $this->render('nailsstylistspage', ['nailsstylistspage' => $nailsstylistspage]);
+    }
+
+
+    public function eyebrowstylistspage(){
+        $eyebrowstylistspage = $this->advertisementRepository->getEyebrowsStylistAdvertisements();
+        $this->render('eyebrowstylistspage', ['eyebrowstylistspage' => $eyebrowstylistspage]);
+    }
 
     public function addadvertisementpage()
     {
