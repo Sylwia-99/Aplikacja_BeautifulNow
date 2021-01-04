@@ -5,18 +5,18 @@ class Advertisement
 {
     private $name;
     private $surname;
-    private $job;
+    private $profession;
     private $description;
     private $address;
     private $telephone;
     private $image;
     private $date;
 
-    public function __construct($name, $surname, $job, $description, $address, $telephone, $image, $date)
+    public function __construct($name, $surname, $profession, $description, $address, $telephone, $image, $date)
     {
         $this->name = $name;
         $this->surname = $surname;
-        $this->job = $job;
+        $this->profession = $profession;
         $this->description = $description;
         $this->address = $address;
         $this->telephone = $telephone;
@@ -56,12 +56,12 @@ class Advertisement
 
     public function getJob()
     {
-        return $this->job;
+        return $this->profession;
     }
 
-    public function setJob($job): void
+    public function setJob($profession): void
     {
-        $this->job = $job;
+        $this->job = $profession;
     }
 
     public function getAddress()

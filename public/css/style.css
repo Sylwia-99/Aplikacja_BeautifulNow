@@ -139,7 +139,7 @@ text#register{
 }
 
 header {
-    height: 19vh;
+    height: 12vh;
     width: 99.9vw;
     background: #5e1a65 linear-gradient(180deg, #2a0e2d 0%, #622367 50%, #3a133d 100%) 0% 0% no-repeat padding-box;
     display: flex;
@@ -237,6 +237,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 80vw;
+    height: 88vh;
 }
 
 section {
@@ -245,10 +246,28 @@ section {
     grid-gap: 1em;
     padding: 1em;
     overflow: auto;
+    height: 25em;
+}
+
+section> div> img{
+    height: 8em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+section>div>div>div{
+    height: 50%;
+    margin: 1em;
+    font: normal normal normal 18px/25px Segoe Script;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 div#recommended1>img{
-    height: 20em;
+    height: 8em;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
@@ -265,7 +284,7 @@ div#recommended1>div>div{
 }
 
 h1{
-    font: normal normal normal 50px/57px Segoe Script;
+    font: normal normal normal 20px/30px Segoe Script;
     color:white;
     align-items: center;
     margin: 0.1em;
@@ -273,24 +292,31 @@ h1{
 
 h2{
     margin-top: 0;
-    font: normal normal normal 20px/27px Segoe Script;
+    font: normal normal normal 12px/12px Segoe Script;
     color:white;
 }
 h3{
     margin-top: 0;
-    font: normal normal normal 14px/21px Segoe Script;
+    font: normal normal normal 11px/11px Segoe Script;
     color:white;
 }
 
 h4{
     margin: 0 1.5em;
-    font: normal normal normal 22px/29px Segoe Script;
+    font: normal normal normal 20px/25px Segoe Script;
     color:white;
+}
+
+h5{
+    font: normal normal normal 11px/11px Segoe Script;
+    color:white;
+    align-items: center;
+    margin: 0.1em;
 }
 
 p{
     margin-top: 0;
-    font: normal normal normal 18px/25px Segoe Script;
+    font: normal normal normal 15px/15px Segoe Script;
     color:white;
 }
 
@@ -323,6 +349,8 @@ div#find input[type="search"]{
     text-align: left;
     letter-spacing: 0px;
     color: #FFFFFF;
+    margin-top: 0;
+    height: 2em;
 }
 
 div#find ::-webkit-input-placeholder{
@@ -339,7 +367,8 @@ div#find input[type="submit"]{
     border-radius: 70px;
     cursor: pointer;
     text-align: center;
-
+    margin-top: 0;
+    height: 2em;
 }
 
 div#setting> nav{
@@ -429,19 +458,12 @@ div#description i{
     margin: 1em;
 }
 
-h5{
-    font: normal normal normal 30px/47px Segoe Script;
-    color:white;
-    align-items: center;
-    margin: 0.1em;
-}
-
 section.favourites{
     height: 65%;
     width: 96%;
 }
 
-section.recommendeds > div:hover{
+section > div:hover{
     transform: scale(1.1);
 }
 
@@ -551,7 +573,8 @@ div#find input#s2[type="date"]{
     color: #FFFFFF;
     margin-left: 0;
     border-radius:0;
-    height: inherit;
+    margin-top: 0;
+    height: 1.49em;
 }
 
 div#find input#s[type="submit"]{
@@ -587,6 +610,7 @@ div#history1 div#data{
 
 #recommended1{
     text-align: start;
+    height: 22em;
 }
 
 ul.glide__slides{
@@ -596,12 +620,29 @@ ul.glide__slides{
 
 .glide.glide--ltr.glide--carousel.glide--swipeable{
     overflow: hidden;
+    height: 15em;
+}
+
+li.glide__slide h2 {
+    font: normal normal normal 15px/18px Segoe Script;
+}
+
+li.glide__slide h3 {
+    font: normal normal normal 10px/12px Segoe Script;
+}
+
+li.glide__slide #recommended1 {
+    height: 10em;
+}
+
+li.glide__slide #recommended1 > img {
+    height: 10em;
 }
 
 div.glide__arrows{
     position: relative;
     display: flex;
-    bottom: 20em;
+    bottom: 7.5em;
 }
 
 .glide__arrow.glide__arrow--left{
@@ -720,4 +761,23 @@ select{
 
 option{
     background: #5e1a65;
+}
+
+#find > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100em;
+    height: 2em;
+    border: none;
+    background: transparent;
+}
+
+template{
+    height: 1em;
+}
+
+template > img{
+    height: 10em;
 }

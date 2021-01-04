@@ -22,6 +22,6 @@ Routing::get('nailsstylistspage', 'AdvertisementController');
 Routing::get('eyebrowstylistspage', 'AdvertisementController');
 Routing::post('addadvertisementpage', 'AdvertisementController');
 Routing::get('advertisementpage', 'AdvertisementController');
-
+Routing::post('search', 'AdvertisementController');
 
 Routing::run($path);

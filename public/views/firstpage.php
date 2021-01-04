@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide.theme.min.css">
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
 
     <title>FIRST PAGE</title>
 </head>
@@ -57,10 +58,8 @@
                                     <div id="recommended1">
                                         <img src="public/uploads/<?= $advertisement->getImage()?>">
                                         <div>
-                                            <h2><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h2>
-                                            <h3><?= $advertisement->getJob(); ?></h3>
-                                            <p><?= $advertisement->getDescription(); ?></p>
-                                            <h3><?= $advertisement->getTelephone(); ?></h3>
+                                            <h2><?= $advertisement->getName()." ".$advertisement->getSurname()." - ".$advertisement->getJob(); ?></h2>
+                                            <h3><?= $advertisement->getAddress().", ".$advertisement->getTelephone(); ?></h3>
                                             <div id="social-section">
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-twitter"></i>
@@ -91,7 +90,45 @@
                         </script>
                     </div>
                 </div>
+                <section class="search">
+                    <?php foreach ($advertisementpage as $advertisement): ?>
+                        <div id="recommended1">
+                            <img src="public/uploads/<?= $advertisement->getImage()?>">
+                            <div>
+                                <h1><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h1>
+                                <h2><?= $advertisement->getJob(); ?></h2>
+                                <p><?= $advertisement->getDescription(); ?></p>
+                                <h3><?= $advertisement->getTelephone(); ?></h3>
+                                <h5><?= $advertisement->getAddress(); ?></h5>
+                                <div id="social-section">
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach;?>
+                </section>
             </main>
         </div>
     </div>
 </body>
+
+
+<template id="advertisement-template">
+    <div id="">
+        <img src="">
+        <div>
+            <h1>name surname</h1>
+            <h2>profession</h2>
+            <p>description</p>
+            <h3>telephone</h3>
+            <h5>address</h5>
+            <div id="social-section">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+    </div>
+</template>
