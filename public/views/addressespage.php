@@ -40,8 +40,8 @@
                 <div id=description>
                     <i class="far fa-compass"></i>
                     <div>
-                        <h5>Tu znajdziesz dodane</h5>
-                        <h5>przez Ciebe adresy</h5>
+                        <h1 id="setting">Tu znajdziesz dodane</h1>
+                        <h1 id="setting">przez Ciebe adresy</h1>
                     </div>
                 </div>
                 <div class="input">

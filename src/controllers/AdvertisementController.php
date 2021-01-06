@@ -94,6 +94,11 @@ class AdvertisementController extends AppController
         }
     }
 
+    public function like(int $id){
+        $this->advertisementRepository->like($id);
+        http_response_code(200);
+    }
+
     private function validate(array $file): bool
     {
         if($file['size'] > self::MAX_FILE_SIZE){

@@ -48,12 +48,12 @@ function createAdvertisement(advertisement) {
     const address = clone.querySelector("h5");
     address.innerHTML = advertisement.address;
 
-    const instagram = clone.querySelector(".fa-instagram");
-    instagram.innerText = advertisement.instagram;
-    const twitter = clone.querySelector(".fa-twitter");
-    twitter.innerText = advertisement.twitter;
-    const facebook = clone.querySelector(".fa-facebook-f");
-    facebook.innerText = advertisement.facebook;
-
+    clone.querySelector(".fa-instagram");
+    clone.querySelector(".fa-facebook-f");
+    clone.querySelector(".fa-heart");
+    //favourite.innerText = advertisement.favourite;
+    const like = clone.querySelector(".fa-thumbs-up");
+    like.innerText = advertisement.like;
+    clone.querySelector(".order");
     advertisementContainer.appendChild(clone);
 }

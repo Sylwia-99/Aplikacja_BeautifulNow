@@ -266,14 +266,14 @@ section>div>div>div{
     justify-content: space-around;
 }
 
-div#recommended1>img{
+img#recommended1{
     height: 8em;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
 }
 
-div#recommended1>div>div{
+div#recommended>div{
     height: 50%;
     margin: 1em;
     font: normal normal normal 18px/25px Segoe Script;
@@ -288,6 +288,10 @@ h1{
     color:white;
     align-items: center;
     margin: 0.1em;
+}
+
+h1#setting{
+    font: normal normal normal 30px/40px Segoe Script;
 }
 
 h2{
@@ -443,6 +447,7 @@ main#favourites{
     flex-direction: column;
     align-items: center;
     width: 80%;
+    height: 80vh;
     margin: 2em;
 }
 
@@ -608,7 +613,7 @@ div#history1 div#data{
     width: 8em;
 }
 
-#recommended1{
+li.glide__slide>div{
     text-align: start;
     height: 22em;
 }
@@ -635,14 +640,10 @@ li.glide__slide #recommended1 {
     height: 10em;
 }
 
-li.glide__slide #recommended1 > img {
-    height: 10em;
-}
-
 div.glide__arrows{
     position: relative;
     display: flex;
-    bottom: 7.5em;
+    bottom: 14em;
 }
 
 .glide__arrow.glide__arrow--left{
@@ -683,6 +684,10 @@ div.glide__arrows{
     position: relative;
     display: flex;
     bottom: 15em;
+}
+
+#f.glide.glide--ltr.glide--carousel.glide--swipeable {
+    height: 30em;
 }
 
 button.button\.edit-adress {
@@ -780,4 +785,8 @@ template{
 
 template > img{
     height: 10em;
+}
+
+.social-section > i.fas fa-thumbs-up:hover{
+    cursor: pointer;
 }

@@ -41,8 +41,9 @@
             <main id=favourites>
                 <div id=description>
                     <i class="far fa-heart"></i>
-                    <div>                            <h5>Tu znajdziesz swoich</h5>
-                        <h5>ulubionych usługodawców</h5>
+                    <div>
+                        <h1 id="setting">Tu znajdziesz swoich</h1>
+                        <h1 id="setting">ulubionych usługodawców</h1>
                     </div>
                 </div>
                 <div class="favourites">

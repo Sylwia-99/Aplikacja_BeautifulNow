@@ -11,8 +11,10 @@ class Advertisement
     private $telephone;
     private $image;
     private $date;
+    private $like ;
+    private $id;
 
-    public function __construct($name, $surname, $profession, $description, $address, $telephone, $image, $date)
+    public function __construct($name, $surname, $profession, $description, $address, $telephone, $image, $date, $like=0, $id = null)
     {
         $this->name = $name;
         $this->surname = $surname;
@@ -22,6 +24,8 @@ class Advertisement
         $this->telephone = $telephone;
         $this->image = $image;
         $this->date = $date;
+        $this->like = $like;
+        $this->id = $id;
     }
 
     public function getName()
@@ -102,5 +106,25 @@ class Advertisement
     public function setDate($date): void
     {
         $this->date = $date;
+    }
+
+    public function getLike()
+    {
+        return $this->like;
+    }
+
+    public function setLike($like): void
+    {
+        $this->like = $like;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 }

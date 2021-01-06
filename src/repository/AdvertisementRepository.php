@@ -26,7 +26,9 @@ class AdvertisementRepository extends Repository
             $advertisement['address'],
             $advertisement['telephone'],
             $advertisement['image'],
-            $advertisement['date']
+            $advertisement['date'],
+            $advertisement['like'],
+            $advertisement['id']
         );
     }
 
@@ -74,7 +76,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -101,7 +105,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -128,7 +134,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -155,7 +163,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -182,7 +192,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -209,7 +221,9 @@ class AdvertisementRepository extends Repository
                 $advertisement['address'],
                 $advertisement['telephone'],
                 $advertisement['image'],
-                $advertisement['date']
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
             );
         }
 
@@ -227,5 +241,14 @@ class AdvertisementRepository extends Repository
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function like(int $id){
+        $stmt = $this->database->connect()->prepare('
+        UPDATE advertisements SET "like" = "like" + 1 WHERE id = :id
+        ');
+
+        $stmt->bindParam(':id', $id,PDO::PARAM_INT);
+        $stmt->execute();
     }
 }

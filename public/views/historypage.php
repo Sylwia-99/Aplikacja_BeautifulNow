@@ -40,8 +40,8 @@
             <div id=description>
                 <i class="fas fa-history"></i>
                 <div>
-                    <h5>Tu znajdziesz</h5>
-                    <h5>Historie twoich usług</h5>
+                    <h1 id="setting">Tu znajdziesz</h1>
+                    <h1 id="setting">Historie twoich usług</h1>
                 </div>
             </div>
             <section id="history" class="favourites">

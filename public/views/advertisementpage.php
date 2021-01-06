@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide.theme.min.css">
     <script type="text/javascript" src="./public/js/search.js" defer></script>
+    <script type="text/javascript" src="./public/js/statistics.js" defer></script>
 
     <title>ADVERTISEMENT PAGE</title>
 </head>
@@ -57,15 +58,17 @@
                     <ul class="glide__slides">
                         <?php foreach ($advertisementpage as $advertisement): ?>
                         <li class="glide__slide">
-                            <div id="recommended1">
-                                <img src="public/uploads/<?= $advertisement->getImage()?>">
-                                <div>
+                            <div id="<?= $advertisement->getId()?>">
+                                <img id="recommended1" src="public/uploads/<?= $advertisement->getImage()?>">
+                                <div id="recommended">
                                     <h2><?= $advertisement->getName()." ".$advertisement->getSurname()." - ".$advertisement->getJob(); ?></h2>
                                     <h3><?= $advertisement->getAddress().", ".$advertisement->getTelephone(); ?></h3>
                                     <div id="social-section">
                                         <i class="fab fa-instagram"></i>
-                                        <i class="fab fa-twitter"></i>
                                         <i class="fab fa-facebook-f"></i>
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-thumbs-up"> <?= $advertisement->getLike()?></i>
+                                        <i <button>umów się</button></i>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +97,7 @@
             </div>
             <section class="search">
                 <?php foreach ($advertisementpage as $advertisement): ?>
-                    <div id="recommended1">
+                    <div id="<?= $advertisement->getId()?>">
                         <img src="public/uploads/<?= $advertisement->getImage()?>">
                         <div>
                             <h1><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h1>
@@ -104,8 +107,10 @@
                             <h5><?= $advertisement->getAddress(); ?></h5>
                             <div id="social-section">
                                 <i class="fab fa-instagram"></i>
-                                <i class="fab fa-twitter"></i>
                                 <i class="fab fa-facebook-f"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-thumbs-up"> <?= $advertisement->getLike()?></i>
+                                <i <button>umów się</button></i>
                             </div>
                         </div>
                     </div>
@@ -127,8 +132,10 @@
             <h5>address</h5>
             <div id="social-section">
                 <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
                 <i class="fab fa-facebook-f"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-thumbs-up"></i>
+                <i class="order"<button>umów się</button></i>
             </div>
         </div>
     </div>

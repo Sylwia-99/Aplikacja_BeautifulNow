@@ -74,7 +74,7 @@
         height: 20em;
     }
 
-    div#recommended1>img{
+    img#recommended1{
         margin: 0;
         height: 7em;
     }
@@ -101,6 +101,7 @@
 
     div#find input#s2[type="date"]{
         width: 100%;
+        height: auto;
     }
 
     div#find input#s[type="submit"]{
@@ -269,7 +270,7 @@
         font: normal normal normal 18px/28px Segoe Script;
     }
 
-    #recommended1{
+    li.glide__slide>div{
         width: 18em;
         height: 13em;
     }
@@ -287,7 +288,7 @@
     div.glide__arrows{
         position: relative;
         display: flex;
-        bottom: 7.5em;
+        bottom: 10.5em;
     }
 
     .glide__arrow.glide__arrow--left{
@@ -310,14 +311,10 @@
         margin-left: 4em;
     }
 
-    div#invitation{
-        /*margin-top:4em;*/
-    }
-
     #f.glide.glide--ltr.glide--carousel.glide--swipeable {
         margin-top: 4em;
         width: 15em;
-        height: 10em;
+        height: 30em;
     }
 
     #name input, #surname input{
@@ -331,4 +328,14 @@
     #name-surname{
         width: 80%;
     }
+
+    li.glide__slide h2 {
+        font: normal normal normal 28px/30px Segoe Script;
+    }
+
+    li.glide__slide h3 {
+        font: normal normal normal 20px/26px Segoe Script;
+    }
+
+
 }

@@ -23,5 +23,6 @@ Routing::get('eyebrowstylistspage', 'AdvertisementController');
 Routing::post('addadvertisementpage', 'AdvertisementController');
 Routing::get('advertisementpage', 'AdvertisementController');
 Routing::post('search', 'AdvertisementController');
+Routing::get('like', 'AdvertisementController');
 
 Routing::run($path);
