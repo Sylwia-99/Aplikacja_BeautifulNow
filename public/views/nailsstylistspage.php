@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide.theme.min.css">
     <script type="text/javascript" src="./public/js/statistics.js" defer></script>
+    <script type="text/javascript" src="./public/js/searches.js" defer></script>
 
     <title>NAILSSTYLISTS PAGE</title>
 </head>
@@ -60,7 +61,7 @@
                                         <img id="recommended1" src="public/uploads/<?= $advertisement->getImage()?>">
                                         <div id="recommended">
                                             <h2><?= $advertisement->getName()." ".$advertisement->getSurname()." - ".$advertisement->getJob(); ?></h2>
-                                            <h3><?= $advertisement->getAddress().", ".$advertisement->getTelephone(); ?></h3>
+                                            <h3><?= $advertisement->getAddress().", ".$advertisement->getDate().", Kontakt: ".$advertisement->getTelephone(); ?></h3>
                                             <div id="social-section">
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-facebook-f"></i>
@@ -102,6 +103,7 @@
                                 <p><?= $advertisement->getDescription(); ?></p>
                                 <h3><?= $advertisement->getTelephone(); ?></h3>
                                 <h5><?= $advertisement->getAddress(); ?></h5>
+                                <h4><?= $advertisement->getDate(); ?></h4>
                                 <div id="social-section">
                                     <i class="fab fa-instagram"></i>
                                     <i class="fab fa-facebook-f"></i>
@@ -126,6 +128,7 @@
             <p>description</p>
             <h3>telephone</h3>
             <h5>address</h5>
+            <h4>date</h4>
             <div id="social-section">
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-facebook-f"></i>

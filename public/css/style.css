@@ -311,6 +311,11 @@ h4{
     color:white;
 }
 
+.search>div>div> h4 {
+    margin: 0;
+    font: normal normal normal 11px/11px Segoe Script;
+}
+
 h5{
     font: normal normal normal 11px/11px Segoe Script;
     color:white;
@@ -787,6 +792,6 @@ template > img{
     height: 10em;
 }
 
-.social-section > i.fas fa-thumbs-up:hover{
+.social-section > i.fas fa-thumbs-up:hover, #s:hover{
     cursor: pointer;
 }

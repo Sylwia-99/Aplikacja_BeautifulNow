@@ -242,8 +242,22 @@ class AdvertisementRepository extends Repository
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getAdvertisementBySearchParameters(string $address, string $date)
+    {
+        $searchCity = strtolower($address);
 
-    public function like(int $id){
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM advertisements WHERE LOWER(address) LIKE :address AND date LIKE :date
+        ');
+        $stmt->bindParam(':address', $searchCity, PDO::PARAM_STR);
+        $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function like(int $id)
+    {
         $stmt = $this->database->connect()->prepare('
         UPDATE advertisements SET "like" = "like" + 1 WHERE id = :id
         ');

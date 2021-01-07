@@ -1,26 +1,30 @@
-const search = document.querySelector('input[placeholder="Adres, np. Armi Krajowej 1"]');
+const address = document.querySelector('input[placeholder="Adres, np. Armi Krajowej 1"]');
+const date = document.querySelector('input[placeholder="Kiedy"]');
 const advertisementContainer = document.querySelector(".search");
 
-search.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
+const button = document.querySelector('#s');
 
-        const data = {search: this.value};
+function searchFunction(){
+    const data = {
+        address: address.value,
+        date: date.value
+    };
 
-        fetch("/search", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then(function (response) {
-            return response.json();
-        }).then(function (advertisementpage) {
-            advertisementContainer.innerHTML = "";
-            loadAdvertisements(advertisementpage)
-        });
-    }
-});
+    fetch("/searches", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(function (response) {
+        return response.json();
+    }).then(function (advertisementpage) {
+        advertisementContainer.innerHTML = "";
+        loadAdvertisements(advertisementpage)
+    });
+}
+
+button.addEventListener("click", searchFunction);
 
 function loadAdvertisements(advertisementpage) {
     advertisementpage.forEach(advertisement => {
@@ -39,8 +43,8 @@ function createAdvertisement(advertisement) {
     image.src = `/public/uploads/${advertisement.image}`;
     const nameAndSurname = clone.querySelector("h1");
     nameAndSurname.innerHTML = [advertisement.name, advertisement.surname];
-    const profession = clone.querySelector("h2");
-    profession.innerHTML = advertisement.profession;
+    //const profession = clone.querySelector("h2");
+    //profession.innerHTML = advertisement.profession;
     const description = clone.querySelector("p");
     description.innerHTML = advertisement.description;
     const telephone = clone.querySelector("h3");
