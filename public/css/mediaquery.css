@@ -11,36 +11,69 @@
         width: 100%;
     }
 
-    form{
-        margin: auto;
-    }
-
-    .logo>img{
-        width: 70vw;
-        margin: 1em;
-    }
-
     .container-base{
         flex-direction: column;
     }
 
-    header>img{
+    form{
+        margin: auto;
+    }
+
+    .logo > img{
+        width: 70vw;
+        margin: 1em;
+    }
+
+    header > img{
         width: 14em;
         margin: 0;
     }
 
-    header>div#icon>a>img {
+    header > div#icon > a > img {
         font-size: 0.8em;
         margin: 1.4em 0.4em;
     }
 
-    header>div>a>i {
+    div#profile img{
+        width: 10em;
+    }
+
+    div#setting-favourite > nav > div#profile img{
+        width: 5em;
+    }
+
+    img#recommended1{
+        margin: 0;
+        height: 7em;
+    }
+
+    header > div > a > i {
         font-size: 0.8em;
         margin: 1.5em 0.4em;
     }
 
-    header>div#icon a{
+    a{
+        font: normal normal normal 21px/105px Segoe Script;
+        margin: 0;
+    }
+
+    a#two_line{
+        font: normal normal normal 21px/60px Segoe Script;
+
+    }
+
+    header > div#icon a{
         margin: 0.2em;
+    }
+
+    a#d{
+        font: normal normal normal 18px/40px Segoe Script;
+    }
+
+    a#again {
+        width: 20vw;
+        height: 1.5vh;
+        font: normal normal normal 18px/28px Segoe Script;
     }
 
     nav{
@@ -57,14 +90,40 @@
         padding: 2em;
     }
 
-    a{
-        font: normal normal normal 21px/105px Segoe Script;
-        margin: 0;
+    div#setting .button{
+        padding: 2em;
+        width: 30em;
+        height: 4em;
     }
 
-    a#two_line{
-        font: normal normal normal 21px/60px Segoe Script;
+    div#favourite1 .button{
+        width: 4.2em;
+        height: 0.5em;
+        padding:1em;
+    }
 
+    a#f.button{
+        text-align: center;
+    }
+
+    div#addresses .button {
+        height: 2em;
+        width: 8em;
+    }
+
+    form#logout > button{
+        border-radius: 100em;
+        height: 7em;
+        width: 28em;
+        font: normal normal normal 25px Segoe Script;;
+    }
+
+    form#logout1 > button{
+        border-radius: 100em;
+        height: 8.5em;
+        width: 9.5em;
+        text-align: center;
+        font: normal normal normal 18px Segoe Script;
     }
 
     section {
@@ -74,14 +133,24 @@
         height: 20em;
     }
 
-    img#recommended1{
-        margin: 0;
-        height: 7em;
+    section.favourites{
+        height: auto;
+    }
+
+    div#addresses > section {
+        height: 25em;
+    }
+
+    section#history.favourites {
+        position: inherit;
     }
 
     div#find{
         margin-top: 0.5em;
-        #margin-bottom: 1em;
+    }
+
+    input{
+        font: normal normal normal 0.8em Segoe Script;
     }
 
     div#find input[type="search"]{
@@ -109,6 +178,10 @@
         width: 30%;
     }
 
+    #name input, #surname input{
+        margin-left: 0;
+    }
+
     h4{
         margin-left: 1em;
         font-size: 1.3em;
@@ -123,20 +196,12 @@
         margin-top: 1em;
     }
 
-    div#setting .button{
-        padding: 2em;
-        width: 30em;
-        height: 4em;
-    }
     div#profile{
         margin-top: 1%;
     }
 
     div#setting >nav>div#profile{
         margin: 0;
-    }
-    div#profile img{
-        width: 10em;
     }
 
     div#setting-favourite{
@@ -174,10 +239,6 @@
         margin: 0;
     }
 
-    div#setting-favourite>nav>div#profile img{
-        width: 5em;
-    }
-
     main#favourites {
         margin: 1em;
     }
@@ -189,10 +250,6 @@
     div#description i {
         font-size: 2em;
         margin: 0.3em;
-    }
-
-    section.favourites{
-        height: auto;
     }
 
     .favourites{
@@ -208,16 +265,6 @@
         margin: 0.3em;
     }
 
-    div#favourite1 .button{
-        width: 4.2em;
-        height: 0.5em;
-        padding:1em;
-    }
-
-    a#f.button{
-        text-align: center;
-    }
-
     a#f i{
         margin: 0;
     }
@@ -226,51 +273,27 @@
         margin-left: 5.6em;
     }
 
-    div#addresses >section {
-        height: 25em;
-    }
-    div#addresses .button {
-        height: 2em;
-        width: 8em;
-    }
-
-    input{
-        font: normal normal normal 0.8em Segoe Script;
-    }
     .fa-plus-circle {
         margin-top: 2em;
     }
 
-    a#d{
-        font: normal normal normal 18px/40px Segoe Script;
-    }
-
     .fa-heart, .fa-history, .fa-location-arrow, .fa-sign-out-alt{
-        margin-right:0em;
+        margin-right:0;
     }
 
     li{
         margin-bottom: 1em;
     }
 
-    section#history.favourites {
-        position: inherit;
-    }
-
     div#history1 div{
         width: 8em;
     }
+
     div#history1 div#data{
         width: 3em;
     }
 
-    a#again {
-        width: 20vw;
-        height: 1.5vh;
-        font: normal normal normal 18px/28px Segoe Script;
-    }
-
-    li.glide__slide>div{
+    li.glide__slide > div{
         width: 18em;
         height: 13em;
     }
@@ -317,10 +340,6 @@
         height: 30em;
     }
 
-    #name input, #surname input{
-        margin-left: 0;
-    }
-
     .add-advertisement-container{
         margin: 3em 0;
     }
@@ -335,5 +354,15 @@
 
     li.glide__slide h3 {
         font: normal normal normal 20px/26px Segoe Script;
+    }
+
+    form#logout > button > i.fas.fa-sign-out-alt{
+        margin-left: 6em;
+        margin-right: 1em;
+    }
+
+    form#logout1 > i.fas.fa-sign-out-alt{
+        margin-left: 6.5em;
+        margin-right: 0.5em;
     }
 }

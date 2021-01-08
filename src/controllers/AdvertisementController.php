@@ -19,49 +19,54 @@ class AdvertisementController extends AppController
         $this->advertisementRepository = new AdvertisementRepository();
     }
 
-    public function advertisementpage(){
-        $advertisementpage = $this->advertisementRepository->getAdvertisements();
-        $this->render('advertisementpage', ['advertisementpage' => $advertisementpage]);
+    public function advertisements(){
+        $advertisements = $this->advertisementRepository->getAdvertisements();
+        $this->render('advertisements', ['advertisements' => $advertisements]);
     }
 
-    public function firstpage(){
-        $advertisementpage = $this->advertisementRepository->getAdvertisements();
-        $this->render('firstpage', ['advertisementpage' => $advertisementpage]);
+    public function first(){
+        $advertisements = $this->advertisementRepository->getAdvertisements();
+        $this->render('first', ['advertisements' => $advertisements]);
     }
 
-    public function homepage(){
-        $advertisementpage = $this->advertisementRepository->getAdvertisements();
-        $this->render('homepage', ['advertisementpage' => $advertisementpage]);
+    public function home(){
+        $advertisements = $this->advertisementRepository->getAdvertisements();
+        $this->render('home', ['advertisements' => $advertisements]);
     }
 
-    public function hairdresserspage(){
-        $hairdresserspage = $this->advertisementRepository->getHairdresserAdvertisements();
-        $this->render('hairdresserspage', ['hairdresserspage' => $hairdresserspage]);
+    public function hairdressers(){
+        $hairdressers = $this->advertisementRepository->getAdvertisementsByProfession('Fryzjer');
+        $this->render('hairdressers', ['hairdressers' => $hairdressers]);
     }
 
-    public function makeupartistspage(){
-        $makeupartistspage = $this->advertisementRepository->getMakeUpArtistAdvertisements();
-        $this->render('makeupartistspage', ['makeupartistspage' => $makeupartistspage]);
+    public function makeupartists(){
+        $makeupartists = $this->advertisementRepository->getAdvertisementsByProfession('Makijażysta');
+        $this->render('makeupartists', ['makeupartists' => $makeupartists]);
     }
 
-    public function barberspage(){
-        $barberspage = $this->advertisementRepository->getBarberAdvertisements();
-        $this->render('barberspage', ['barberspage' => $barberspage]);
+    public function barbers(){
+        $barbers = $this->advertisementRepository->getAdvertisementsByProfession('Barber');
+        $this->render('barbers', ['barbers' => $barbers]);
     }
 
-    public function nailsstylistspage(){
-        $nailsstylistspage = $this->advertisementRepository->getNailsStylistAdvertisements();
-        $this->render('nailsstylistspage', ['nailsstylistspage' => $nailsstylistspage]);
+    public function nailsstylists(){
+        $nailsstylists = $this->advertisementRepository->getAdvertisementsByProfession('Stylista paznokci');
+        $this->render('nailsstylists', ['nailsstylists' => $nailsstylists]);
     }
 
 
-    public function eyebrowstylistspage(){
-        $eyebrowstylistspage = $this->advertisementRepository->getEyebrowsStylistAdvertisements();
-        $this->render('eyebrowstylistspage', ['eyebrowstylistspage' => $eyebrowstylistspage]);
+    public function eyebrowstylists(){
+        $eyebrowstylists = $this->advertisementRepository->getAdvertisementsByProfession('Stylista brwi');
+        $this->render('eyebrowstylists', ['eyebrowstylists' => $eyebrowstylists]);
     }
 
-    public function addadvertisementpage()
+    public function addadvertisement()
     {
+        if(!isset($_COOKIE['user'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])){
 
             move_uploaded_file(
@@ -72,11 +77,11 @@ class AdvertisementController extends AppController
             $advertisement = new Advertisement($_POST['name'], $_POST['surname'], $_POST['job'], $_POST['description'], $_POST['address'], $_POST['telephone'], $_FILES['file']['name'], $_POST['date']);
             $this->advertisementRepository->addAdvertisement($advertisement);
 
-            return $this->render('advertisementpage', [
-                'advertisementpage' => $this->advertisementRepository->getAdvertisements(),
+            return $this->render('advertisements', [
+                'advertisements' => $this->advertisementRepository->getAdvertisements(),
                 'messages'=> $this ->messages, 'advertisement' => $advertisement]);
         }
-        return $this ->render('addadvertisementpage',['messages'=> $this -> messages]);
+        return $this ->render('addadvertisement',['messages'=> $this -> messages]);
     }
 
     public function search()
@@ -90,7 +95,7 @@ class AdvertisementController extends AppController
             header('Content-type: application/json');
             http_response_code(200);
 
-            echo json_encode($this->advertisementRepository->getAdvertisementByAddress($decoded['search']));
+            echo json_encode($this->advertisementRepository->getAdvertisementByAddress($decoded['address']));
         }
     }
 

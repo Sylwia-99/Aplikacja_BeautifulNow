@@ -3,19 +3,19 @@
 require_once 'AppController.php';
 
 class DefaultController extends AppController{
-    public function settingpage(){
-        $this->render('settingpage');
+    public function setting(){
+        $this->render('setting');
     }
 
-    public function favouritepage(){
-        $this->render('favouritepage');
+    public function favourite(){
+        $this->render('favourite');
     }
 
-    public function historypage(){
-        $this->render('historypage');
+    public function history(){
+        $this->render('history');
     }
 
-    public function addressespage(){
-        $this->render('addressespage');
+    public function addresses(){
+        $this->render('addresses');
     }
 }

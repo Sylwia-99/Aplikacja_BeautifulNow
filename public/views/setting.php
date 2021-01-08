@@ -3,19 +3,12 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <title>SETTING PAGE</title>
 </head>
 <body>
     <div class="container-base">
-        <header>
-            <img src="public/img/Logo.png">
-            <div id="icon">
-                <a ><img src="public/img/profile.svg"></i></a>
-                <a href="homepage"><i class="fas fa-home"></i></a>
-                <a href="settingpage"><i class="fas fa-cog"></i></a>
-                <a href="addadvertisementpage"><i class="fas fa-plus"></i></a>
-            </div>
-        </header>
+        <?php include 'templates/header.php';?>
         <div id="setting">
             <nav>
                 <div id="profile">
@@ -23,16 +16,18 @@
                 </div>
                 <ul>
                     <li>
-                        <a id="s" href="favouritepage" class="button"><i class="fas fa-heart"></i>Ulubione</a>
+                        <a id="s" href="favourite" class="button"><i class="fas fa-heart"></i>Ulubione</a>
                     </li>
                     <li>
-                        <a id="s" href="historypage" class="button"><i class="fas fa-history"></i>Historia Usług</a>
+                        <a id="s" href="history" class="button"><i class="fas fa-history"></i>Historia Usług</a>
                     </li>
                     <li>
-                        <a id="s" href="addressespage" class="button"><i class="fas fa-location-arrow"></i>Adresy</a>
+                        <a id="s" href="addresses" class="button"><i class="fas fa-location-arrow"></i>Adresy</a>
                     </li>
                     <li>
-                        <a id="s" href="login" class="button"><i class="fas fa-sign-out-alt"></i>Wyloguj</a>
+                        <form id="logout" action="logout" method="GET">
+                            <button> <i class="fas fa-sign-out-alt"></i> Wyloguj</button>
+                        </form>
                     </li>
                 </ul>
                 </div>

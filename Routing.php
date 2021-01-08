@@ -23,7 +23,7 @@ class Routing{
         }
         $controller = self::$routes[$action];
         $object = new $controller;
-        $action = $action ?: 'firstpage';
+        $action = $action ?: 'first';
 
         $id = $urlParts[1] ?? '';
         $object->$action($id);

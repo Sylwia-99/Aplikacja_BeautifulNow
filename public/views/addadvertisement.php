@@ -3,29 +3,15 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <title>ADDADVERTISEMENT PAGE</title>
 </head>
 <body>
 <div class="container-base">
-    <header>
-        <img src="public/img/Logo.png">
-        <div id="icon">
-            <a ><img src="public/img/profile.svg"></i></a>
-            <a href="homepage"><i class="fas fa-home"></i></a>
-            <a href="settingpage"><i class="fas fa-cog"></i></a>
-            <a href="addadvertisementpage"><i class="fas fa-plus"></i></a>
-        </div>
-    </header>
+    <?php include 'templates/header.php';?>
     <div id="setting-favourite">
-        <form class="add-advertisement-container" action="addadvertisementpage" method="POST" ENCTYPE="multipart/form-data">
-            <div class="message" style="color: white; font: normal normal normal 0.8em Segoe Script;">
-                <?php if(isset($messages)){
-                    foreach ($messages as $message) {
-                        echo $message;
-                    }
-                }
-                ?>
-            </div>
+        <form class="add-advertisement-container" action="addadvertisement" method="POST" ENCTYPE="multipart/form-data">
+            <?php include 'templates/message.php';?>
             <div id="name-surname">
                 <div id="name">
                     <text>Imię</text>
@@ -53,7 +39,7 @@
             <text>Telefon</text>
             <input name="telephone" type="text">
             <input type="button" id="loadFileXml" value="Dodaj Zdjęcie" onclick="document.getElementById('file').click();" />
-            <input type="file" name="file" id="file" accept="image/phg, image/jpeg" style="display:none;"/>
+            <input type="file" name="file" id="file" accept="image/phg, image/jpeg"/>
             <button id="zr" type="submit">Dodaj Ogłoszenie</button>
         </form>
     </div>

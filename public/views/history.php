@@ -3,39 +3,14 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <title>HISTORY PAGE</title>
 </head>
 <body>
 <div class="container-base">
-    <header>
-        <img src="public/img/Logo.png">
-        <div id="icon">
-            <a ><img src="public/img/profile.svg"></i></a>
-            <a href="homepage"><i class="fas fa-home"></i></a>
-            <a href="settingpage"><i class="fas fa-cog"></i></a>
-            <a href="addadvertisementpage"><i class="fas fa-plus"></i></a>
-        </div>
-    </header>
+    <?php include 'templates/header.php';?>
     <div id="setting-favourite">
-        <nav id=favourites>
-            <div id="profile">
-                <img src="public/img/profile.svg">
-            </div>
-            <ul id="f">
-                <li>
-                    <a id="f" href="favouritepage" class="button"><i class="fas fa-heart"></i> Ulubione</a>
-                </li>
-                <li>
-                    <a id="f" href="historypage" class="button"><i class="fas fa-history"></i> Historia Usług</a>
-                </li>
-                <li>
-                    <a id="f" href="addressespage" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
-                </li>
-                <li>
-                    <a id="f" href="login" class="button"><i class="fas fa-sign-out-alt"></i> Wyloguj</a>
-                </li>
-            </ul>
-        </nav>
+        <?php include 'templates/userSettingMenu.php';?>
         <main id=favourites>
             <div id=description>
                 <i class="fas fa-history"></i>

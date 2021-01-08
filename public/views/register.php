@@ -3,6 +3,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
+
     <title>REGISTER PAGE</title>
 </head>
 <body>
@@ -12,14 +13,7 @@
                 <div class="logo">
                     <img src="public/img/Logo.png">
                 </div>
-                <div class="message" style="color: white; font: normal normal normal 0.8em Segoe Script;">
-                    <?php if(isset($messages)){
-                        foreach ($messages as $message) {
-                            echo $message;
-                        }
-                    }
-                    ?>
-                </div>
+                <?php include 'templates/message.php';?>
                 <text id="register">Imię</text>
                 <input id="register" name="name" type="text">
                 <text id="register">Nazwisko</text>

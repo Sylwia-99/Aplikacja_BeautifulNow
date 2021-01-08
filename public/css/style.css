@@ -6,8 +6,6 @@ body{
     width: 100vw;
     height: 100vh;
     background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
-    #background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +31,15 @@ body{
     margin-top: 1em;
 }
 
+.container-base{
+    height: 100vh;
+    background: #38143b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -41,7 +48,6 @@ form{
     width: 80%;
     height: 75vh;
     background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
-    #background: transparent linear-gradient(180deg, #6A2570 0%, #351338 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #FFFFFF;
     border-radius: 90px;
 }
@@ -50,12 +56,25 @@ form.register{
     height: 95vh;
 }
 
+#find > form {
+    flex-direction: row;
+    width: 100em;
+    height: 2em;
+    border: none;
+    background: transparent;
+}
+
+form#logout, form#logout1{
+    border: none;
+    background: transparent;
+    height: 100%;
+    width: calc(100% - 1px);
+}
+
 button{
     background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
-    #border: 1px solid #FFFFFF;
     border-radius: 70px;
-
     width: 50%;
     height: 7vh;
     color: white;
@@ -75,24 +94,66 @@ button#zr{
     line-height: 1.5em;
 }
 
-button:hover{
+button:hover, a:hover, i:hover{
     transform: scale(0.9);
     opacity:0.85;
 }
 
-a:hover{
-    transform: scale(0.9);
-    opacity:0.85;
+.button {
+    background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 8em;
+    letter-spacing: 0.9px;
+    color: #FFFFFF;
+    padding: 1.4em;
+    width: 80%;
+    height: 2em;
+    margin-top:1em
 }
 
-i:hover{
-    transform: scale(0.9);
-    opacity:0.85;
+a#f.button, a#s.button{
+    text-align: left;
+}
+
+div#favourite1 .button{
+    width: 5em;
+    background: #411743 0 0 no-repeat padding-box;
+    border-radius: 20px;
+}
+
+div#addresses .button{
+    width: 10em;
+}
+
+form#logout > button{
+    border: none;
+    width: 83%;
+    text-align: left;
+    font: normal normal normal 15px/10px Segoe Script;
+}
+
+form#logout1 > button{
+    border: none;
+    width: 100%;
+    text-align: left;
+    font: normal normal normal 15px/10px Segoe Script;
+}
+
+button.button\.edit-adress {
+    width: 10em;
+}
+
+form#logout > button > i.fas.fa-sign-out-alt{
+    margin-left: 43%;
+    margin-right: 0.6em;
+}
+
+form#logout1 > button > i.fas.fa-sign-out-alt{
+    margin-left: 30%;
+    margin-right: 1em;
 }
 
 input{
     background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FCFAFA;
     border-radius: 70px;
     text-align: left;
     font: normal normal normal 1em Segoe Script;
@@ -108,245 +169,11 @@ input#register{
     margin: 0.5em;
 }
 
-text{
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    font: normal normal normal 1.2em Segoe Script;
-    letter-spacing: 0px;
-    color: #ffffff;
-    width: 80%;
-}
-
-text#register{
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    font: normal normal normal 1em Segoe Script;
-    letter-spacing: 0px;
-    color: #ffffff;
-    width: 80%;
-}
-
-.container-base{
-    height: 100vh;
-    #background: transparent linear-gradient(180deg, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-    background: #38143b;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-header {
-    height: 12vh;
-    width: 99.9vw;
-    background: #5e1a65 linear-gradient(180deg, #2a0e2d 0%, #622367 50%, #3a133d 100%) 0% 0% no-repeat padding-box;
-    display: flex;
-    align-items: center;
-}
-
-header>img {
-    width: 15vw;
-    justify-content: flex-start;
-}
-
-header >div#icon {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-header>div#icon a {
-    font-size: 2em;
-    color: white;
-    margin: 1.5em 1em;
-    justify-content: center;
-}
-
-
-header>div#icon>a>img {
-    width: 1.2em;
-}
-
-div#main{
-    display: flex;
-    width: 100%;
-    height: 80vh;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 20vw;
-    height:81vh;
-    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
-    #background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    #background: #622367;
-    #border-radius: 5em;
-    #margin-top: 0.2em;
-}
-
-a {
-    text-decoration: none;
-    display: inline-block;
-    justify-content: center;
-    text-align: center;
-    line-height: 5em;
-    font: normal normal normal 14px/30px Segoe Script;
-    color: #FFFFFF;
-}
-
-.button {
-    background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FCFAFA;
-    border-radius: 8em;
-    letter-spacing: 0.9px;
-    color: #FFFFFF;
-    padding: 1.4em;
-    width: 80%;
-    height: 2em;
-    margin-top:1em
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    list-style-type: none;
-    font: normal normal normal 10px/3px Segoe Script;
-    letter-spacing: 0.72px;
-    color: #FFFFFF;
-    height: 100%;
-    width: calc(100% - 40px);
-    margin: auto;
-    padding: 0;
-
-}
-
-li {
-    text-align: center;
-    justify-content: center;
-    color: white;
-    margin-bottom: 2em;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    height: 88vh;
-}
-
-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    padding: 1em;
-    overflow: auto;
-    height: 25em;
-}
-
-section> div> img{
-    height: 8em;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1em 1em 0 0;
-}
-
-section>div>div>div{
-    height: 50%;
-    margin: 1em;
-    font: normal normal normal 18px/25px Segoe Script;
-    color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-img#recommended1{
-    height: 8em;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1em 1em 0 0;
-}
-
-div#recommended>div{
-    height: 50%;
-    margin: 1em;
-    font: normal normal normal 18px/25px Segoe Script;
-    color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-h1{
-    font: normal normal normal 20px/30px Segoe Script;
-    color:white;
-    align-items: center;
-    margin: 0.1em;
-}
-
-h1#setting{
-    font: normal normal normal 30px/40px Segoe Script;
-}
-
-h2{
-    margin-top: 0;
-    font: normal normal normal 12px/12px Segoe Script;
-    color:white;
-}
-h3{
-    margin-top: 0;
-    font: normal normal normal 11px/11px Segoe Script;
-    color:white;
-}
-
-h4{
-    margin: 0 1.5em;
-    font: normal normal normal 20px/25px Segoe Script;
-    color:white;
-}
-
-.search>div>div> h4 {
-    margin: 0;
-    font: normal normal normal 11px/11px Segoe Script;
-}
-
-h5{
-    font: normal normal normal 11px/11px Segoe Script;
-    color:white;
-    align-items: center;
-    margin: 0.1em;
-}
-
-p{
-    margin-top: 0;
-    font: normal normal normal 15px/15px Segoe Script;
-    color:white;
-}
-
-div#invitation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div#find{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 div#find input{
     background: transparent linear-gradient(180deg, #69246E 0%, #9B5B9F 0%, #9F60A3 0%, #A061A48F 100%, #A162A5 100%) 0% 0% no-repeat padding-box;
     color: white;
     height: 7vh;
     width: 90vw;
-
 }
 
 div#find input[type="search"]{
@@ -380,30 +207,109 @@ div#find input[type="submit"]{
     height: 2em;
 }
 
-div#setting> nav{
+div#addresses .input{
     display: flex;
+    flex-direction: row;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.input input{
+    background: transparent linear-gradient(180deg, #69246E 0%, #9B5B9F 0%, #9F60A3 0%, #A061A48F 100%, #A162A5 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FCFAFA;
+    border-radius: 70px;
+    width: 100%;
+    height: 4em;
+}
+
+.input ::-webkit-input-placeholder{
+    color:white;
+    opacity: 0.52;
+}
+
+.add-advertisement-container input{
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    height: 3.5vh;
+}
+
+#name input, #surname input{
+    margin-left: 0;
+    width: 95%;
+}
+
+text{
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font: normal normal normal 1.2em Segoe Script;
+    letter-spacing: 0;
+    color: #ffffff;
+    width: 80%;
+}
+
+text#register{
+    font: normal normal normal 1em Segoe Script;
+}
+
+header {
+    height: 12vh;
+    width: 99.9vw;
+    background: #5e1a65 linear-gradient(180deg, #2a0e2d 0%, #622367 50%, #3a133d 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+}
+
+header > img {
+    width: 15vw;
+    justify-content: flex-start;
+}
+
+header > div#icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header > div#icon a {
+    font-size: 2em;
+    color: white;
+    margin: 1.5em 1em;
+    justify-content: center;
+}
+
+
+header > div#icon > a > img {
+    width: 1.2em;
+}
+
+div#main{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20vw;
+    height: 81vh;
+    background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
+}
+
+div#setting > nav{
     flex-direction: row;
     border-radius: 190px;
     width: 98vw;
 }
 
-div#profile{
-    justify-content: center;
-    align-items: center;
-    margin: auto ;
-}
-
-div#setting >nav>div#profile{
-    margin: auto 0 auto 2em;
-}
-
-div#setting .button{
-    align-items: left;
-    padding: 1em;
-}
-
-div#setting-favourite>nav{
-    display: flex;
+div#setting-favourite > nav{
     flex-direction: row;
     background: transparent;
     border: none;
@@ -411,20 +317,199 @@ div#setting-favourite>nav{
     height: 80vh;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    line-height: 5em;
+    font: normal normal normal 14px/30px Segoe Script;
+    color: #FFFFFF;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    font: normal normal normal 10px/3px Segoe Script;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    height: 100%;
+    width: calc(100% - 40px);
+    margin: auto;
+    padding: 0;
+
+}
+
+div#setting-favourite > nav > ul#f{
+    width: auto;
+    height: auto;
+    margin: 8em 0;
+}
+
+ul.glide__slides{
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 88vh;
+}
+
+main#favourites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: 2em;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+    height: 25em;
+}
+
+section.favourites{
+    height: 65%;
+    width: 96%;
+}
+
+div#addresses > section {
+    height: 8.5em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+    overflow: auto;
+}
+
+section > div:hover{
+    transform: scale(0.95);
+}
+
+section > div > img{
+    height: 8em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+section > div > div > div{
+    height: 50%;
+    margin: 1em;
+    font: normal normal normal 18px/25px Segoe Script;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section#history.favourites{
+    grid-template-columns: 1fr;
+}
+
+img#recommended1{
+    height: 8em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+div#recommended > div{
+    height: 50%;
+    margin: 1em;
+    font: normal normal normal 18px/25px Segoe Script;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1, h2, h3, h4, h5, p{
+    color: white;
+}
+
+h1{
+    font: normal normal normal 20px/30px Segoe Script;
+    align-items: center;
+    margin: 0.1em;
+}
+
+h1#setting{
+    font: normal normal normal 30px/40px Segoe Script;
+}
+
+h2{
+    margin-top: 0;
+    font: normal normal normal 12px/12px Segoe Script;
+}
+h3{
+    margin-top: 0;
+    font: normal normal normal 11px/11px Segoe Script;
+}
+
+h4{
+    margin: 0 1.5em;
+    font: normal normal normal 20px/25px Segoe Script;
+}
+
+.search > div > div > h4 {
+    margin: 0;
+    font: normal normal normal 11px/11px Segoe Script;
+}
+
+h5{
+    font: normal normal normal 11px/11px Segoe Script;
+    margin: 0.1em;
+}
+
+p{
+    margin-top: 0;
+    font: normal normal normal 15px/15px Segoe Script;
+}
+
+div#invitation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#find{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#profile{
+    justify-content: center;
+    align-items: center;
+    margin: auto 0 auto 2em;
+}
+
 div#setting-favourite{
     display: flex;
     flex-direction: row;
-    #background: transparent linear-gradient(180deg, #98599B 0%, #4C2D4E 100%) 0% 0% no-repeat padding-box;
-    #background: #622367;
     background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
     border-radius: 90px;
     width: 98vw;
     height: 79.7%;
     margin-top: 0.2em;
-}
-
-a#f.button, a#s.button{
-    text-align: left;
 }
 
 a#f i{
@@ -437,29 +522,8 @@ a#s i{
     margin-right: 1em;
 }
 
-div#setting-favourite a#f{
-    width: 20vw;
-}
-
-div#setting-favourite>nav> ul#f{
-    width: auto;
-    height: auto;
-    margin: 8em 0em;
-}
-
-main#favourites{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 80vh;
-    margin: 2em;
-}
-
-div#description{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ul#f > i{
+    margin: 12em;
 }
 
 div#description i{
@@ -468,13 +532,14 @@ div#description i{
     margin: 1em;
 }
 
-section.favourites{
-    height: 65%;
-    width: 96%;
+div#setting-favourite a#f{
+    width: 20vw;
 }
 
-section > div:hover{
-    transform: scale(1.1);
+div#description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div#favourite1{
@@ -483,20 +548,11 @@ div#favourite1{
     align-items: center;
     justify-content: center;
     background: transparent linear-gradient(180deg, #a162a5 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    #background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
-div#favourite1> img{
+div#favourite1 > img{
     width: 5em;
-}
-
-div#favourite1 .button{
-    width: 5em;
-    background: #411743 0% 0% no-repeat padding-box;
-    #border: 2px solid #FEFAFA;
-    border-radius: 20px;
 }
 
 hr{
@@ -514,57 +570,11 @@ div#addresses{
     flex-direction: column;
 }
 
-div#addresses .button{
-    width: 10em;
-}
-
-div#addresses .input{
-    display: flex;
-    flex-direction: row;
-}
-
-
-.input
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.input input{
-    background: transparent linear-gradient(180deg, #69246E 0%, #9B5B9F 0%, #9F60A3 0%, #A061A48F 100%, #A162A5 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FCFAFA;
-    border-radius: 70px;
-    width: 100%;
-    height: 4em;
-}
-.input input[tye="search"]{
-    font-size: 50em;
-    padding: 0.1em;
-}
-.input ::-webkit-input-placeholder{
-    color:white;
-    opacity: 0.52;
-}
-
 .fa-plus-circle{
     margin-inline-start: -3.5em;
     left: -4em;
     margin-top: 2.5em;
     color: white;
-}
-
-div#addresses >section {
-    height: 8.5em;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1em;
-    padding: 1em;
-    overflow: auto;
-}
-
-ul#f> i{
-    margin: 12em;
 }
 
 div#find input#s1[type="search"]{
@@ -595,16 +605,10 @@ div#find input#s[type="submit"]{
     border-radius:0px 70px 70px 0px;
 }
 
-section#history.favourites{
-    grid-template-columns: 1fr;
-}
-
 div#history1{
     display: flex;
     align-items: center;
     background: transparent linear-gradient(180deg, #a162a5 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    #background: transparent linear-gradient(180deg, #E9BCEB 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
-    #border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
@@ -618,14 +622,9 @@ div#history1 div#data{
     width: 8em;
 }
 
-li.glide__slide>div{
+li.glide__slide > div{
     text-align: start;
     height: 22em;
-}
-
-ul.glide__slides{
-    display: flex;
-    flex-direction: row;
 }
 
 .glide.glide--ltr.glide--carousel.glide--swipeable{
@@ -665,7 +664,6 @@ div.glide__arrows{
 
 .favourites{
     width: 50em;
-    #height: 20em;
 }
 
 #favourite1{
@@ -695,9 +693,6 @@ div.glide__arrows{
     height: 30em;
 }
 
-button.button\.edit-adress {
-    width: 10em;
-}
 .add-advertisement-container{
     display: flex;
     flex-direction: column;
@@ -706,12 +701,6 @@ button.button\.edit-adress {
     align-items: center;
     border: none;
     background: transparent;
-}
-
-.add-advertisement-container input{
-    margin-top: 0em;
-    margin-bottom: 0.2em;
-    height: 3.5vh;
 }
 
 #name-surname{
@@ -734,11 +723,6 @@ button.button\.edit-adress {
     margin-left: 1em;
 }
 
-#name input, #surname input{
-    margin-left: 0;
-    width: 95%;
-}
-
 #loadFileXml{
     margin-top: 0.5em;
     height: 5vh;
@@ -759,29 +743,16 @@ select{
     border-radius: 70px;
     text-align: left;
     font: normal normal normal 1em Segoe Script;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #ffffff;
     width: 80%;
     height: 5vh;
     padding: 0.2em;
-    margin: 1em;
-    margin-top: 0em;
-    margin-bottom: 0.2em;
+    margin: 0 1em 0.2em 1em;
 }
 
 option{
     background: #5e1a65;
-}
-
-#find > form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100em;
-    height: 2em;
-    border: none;
-    background: transparent;
 }
 
 template{
@@ -792,6 +763,16 @@ template > img{
     height: 10em;
 }
 
-.social-section > i.fas fa-thumbs-up:hover, #s:hover{
+.social-section > i.fas.fa-thumbs-up:hover, #s:hover, #ss:hover{
     cursor: pointer;
 }
+
+.message{
+    color: turquoise;
+    font: normal normal normal 1.5em Segoe Script
+}
+
+#file{
+    display:none;
+}
+

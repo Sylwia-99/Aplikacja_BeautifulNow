@@ -15,14 +15,12 @@ class SecurityController extends AppController
     }
 
     public function login(){
-
         if(!$this->isPost()){
             return $this->render('login');
         }
 
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
-
 
         $user = $this->userRepository->getUser($email);
 
@@ -40,25 +38,20 @@ class SecurityController extends AppController
 
         $cookie_name = 'user';
         $cookie_value = $_POST["email"];
-        setcookie($cookie_name, $cookie_value, time()+60);
-        //session_start();
-        //echo "You session";
-        //return $this->render('homepage', ['messages' => ['Hellow'.$email]]);
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), '/');
 
         if(isset($_COOKIE['user'])){
             $url = "http://$_SERVER[HTTP_HOST]";
-            header("Location: {$url}/homepage");
+            header("Location: {$url}/home");
         }
-        //$url = "http://$_SERVER[HTTP_HOST]";
-        //header("Location: {$url}/login");
     }
 
     public function logout(){
-        //session_destroy();
-
-        //setcookie($cookie_name, $cookie_value, time()-6);
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/login");
+        if(isset($_COOKIE['user'])){
+            setcookie(($_COOKIE['user']), '', time()-7000000, '/');
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
     }
 
     public function register(){

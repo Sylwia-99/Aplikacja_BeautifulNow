@@ -35,12 +35,15 @@ class AdvertisementRepository extends Repository
     public function addAdvertisement(Advertisement $advertisement):void
     {
         $date = new DateTime();
+        $userRepo = new UserRepository();
+        $email = ($_COOKIE['user']);
         $stmt = $this->database->connect()->prepare('
             INSERT INTO advertisements (name, surname, profession, address, telephone, description, id_assigned_by, image, created_at, date)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ');
 
-        $assignedById = 1; //to zrobić na podstawie sesji uzytkownika
+        $user = $userRepo->getUser($email);
+        $assignedById = $userRepo->getUserId($user);
 
         $stmt->execute([
             $advertisement->getName(),
@@ -65,9 +68,9 @@ class AdvertisementRepository extends Repository
         ');
 
         $stmt->execute();
-        $advertisementpage = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach($advertisementpage as $advertisement){
+        foreach($advertisements as $advertisement){
             $result[] = new Advertisement(
                 $advertisement['name'],
                 $advertisement['surname'],
@@ -81,22 +84,23 @@ class AdvertisementRepository extends Repository
                 $advertisement['id']
             );
         }
-
         return $result;
     }
 
-    public function getHairdresserAdvertisements(): array
+    public function getAdvertisementsByProfession(string $profession): array
     {
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements WHERE profession=\'Fryzjer\'
+        SELECT * FROM advertisements WHERE profession = :profession
         ');
 
+        $stmt->bindParam(':profession', $profession, PDO::PARAM_STR);
         $stmt->execute();
-        $hairdresserspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach($hairdresserspage as $advertisement){
+        $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($advertisements as $advertisement){
             $result[] = new Advertisement(
                 $advertisement['name'],
                 $advertisement['surname'],
@@ -110,123 +114,6 @@ class AdvertisementRepository extends Repository
                 $advertisement['id']
             );
         }
-
-        return $result;
-    }
-
-    public function getMakeUpArtistAdvertisements(): array
-    {
-        $result = [];
-
-        $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements WHERE profession=\'Makijażysta\'
-        ');
-
-        $stmt->execute();
-        $makeupartistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach($makeupartistspage as $advertisement){
-            $result[] = new Advertisement(
-                $advertisement['name'],
-                $advertisement['surname'],
-                $advertisement['profession'],
-                $advertisement['description'],
-                $advertisement['address'],
-                $advertisement['telephone'],
-                $advertisement['image'],
-                $advertisement['date'],
-                $advertisement['like'],
-                $advertisement['id']
-            );
-        }
-
-        return $result;
-    }
-
-    public function getBarberAdvertisements(): array
-    {
-        $result = [];
-
-        $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements WHERE profession=\'Barber\'
-        ');
-
-        $stmt->execute();
-        $barberspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach($barberspage as $advertisement){
-            $result[] = new Advertisement(
-                $advertisement['name'],
-                $advertisement['surname'],
-                $advertisement['profession'],
-                $advertisement['description'],
-                $advertisement['address'],
-                $advertisement['telephone'],
-                $advertisement['image'],
-                $advertisement['date'],
-                $advertisement['like'],
-                $advertisement['id']
-            );
-        }
-
-        return $result;
-    }
-
-    public function getNailsStylistAdvertisements(): array
-    {
-        $result = [];
-
-        $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements WHERE profession=\'Stylista paznokci\'
-        ');
-
-        $stmt->execute();
-        $nailsstylistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach($nailsstylistspage as $advertisement){
-            $result[] = new Advertisement(
-                $advertisement['name'],
-                $advertisement['surname'],
-                $advertisement['profession'],
-                $advertisement['description'],
-                $advertisement['address'],
-                $advertisement['telephone'],
-                $advertisement['image'],
-                $advertisement['date'],
-                $advertisement['like'],
-                $advertisement['id']
-            );
-        }
-
-        return $result;
-    }
-
-    public function getEyebrowsStylistAdvertisements(): array
-    {
-        $result = [];
-
-        $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements WHERE profession=\'Stylista brwi\'
-        ');
-
-        $stmt->execute();
-        $eyebrowstylistspage = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach($eyebrowstylistspage as $advertisement){
-            $result[] = new Advertisement(
-                $advertisement['name'],
-                $advertisement['surname'],
-                $advertisement['profession'],
-                $advertisement['description'],
-                $advertisement['address'],
-                $advertisement['telephone'],
-                $advertisement['image'],
-                $advertisement['date'],
-                $advertisement['like'],
-                $advertisement['id']
-            );
-        }
-
         return $result;
     }
 
@@ -235,13 +122,14 @@ class AdvertisementRepository extends Repository
         $searchString = '%' . strtolower($searchString) . '%';
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM advertisements WHERE LOWER(address) LIKE :search
+            SELECT * FROM advertisements WHERE LOWER(address) LIKE :address
         ');
-        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->bindParam(':address', $searchString, PDO::PARAM_STR);
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public function getAdvertisementBySearchParameters(string $address, string $date)
     {
         $searchCity = strtolower($address);
