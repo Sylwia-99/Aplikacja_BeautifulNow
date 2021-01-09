@@ -7,14 +7,6 @@ class DefaultController extends AppController{
         $this->render('setting');
     }
 
-    public function favourite(){
-        $this->render('favourite');
-    }
-
-    public function history(){
-        $this->render('history');
-    }
-
     public function addresses(){
         $this->render('addresses');
     }

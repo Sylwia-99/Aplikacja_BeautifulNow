@@ -8,6 +8,8 @@
     <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <script type="text/javascript" src="./public/js/glide.js" defer></script>
+    <script type="text/javascript" src="./public/js/order.js" defer></script>
+    <script type="text/javascript" src="./public/js/favourite.js" defer></script>
 
     <title>HOME PAGE</title>
 </head>
@@ -31,24 +33,7 @@
                 </div>
                 <section class="search">
                     <?php foreach ($advertisements as $advertisement): ?>
-                        <div id="<?= $advertisement->getId()?>">
-                            <img src="public/uploads/<?= $advertisement->getImage()?>">
-                            <div>
-                                <h1><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h1>
-                                <h2><?= $advertisement->getJob(); ?></h2>
-                                <p><?= $advertisement->getDescription(); ?></p>
-                                <h3><?= $advertisement->getTelephone(); ?></h3>
-                                <h5><?= $advertisement->getAddress(); ?></h5>
-                                <h4><?= $advertisement->getDate(); ?></h4>
-                                <div id="social-section">
-                                    <i class="fab fa-instagram"></i>
-                                    <i class="fab fa-facebook-f"></i>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-thumbs-up"> <?= $advertisement->getLike()?></i>
-                                    <i <button>umów się</button></i>
-                                </div>
-                            </div>
-                        </div>
+                        <?php include 'templates/advertisements.php';?>
                     <?php endforeach;?>
                 </section>
             </main>

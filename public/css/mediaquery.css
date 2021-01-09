@@ -285,11 +285,15 @@
         margin-bottom: 1em;
     }
 
-    div#history1 div{
+    li#setting{
+        margin-bottom: 0.1em;
+    }
+
+    .history1 div{
         width: 8em;
     }
 
-    div#history1 div#data{
+    .history1 div#data{
         width: 3em;
     }
 
@@ -356,6 +360,14 @@
         font: normal normal normal 20px/26px Segoe Script;
     }
 
+    #invitation h1 {
+        font: normal normal normal 40px/30px Segoe Script;
+    }
+
+    #invitation h2 {
+        font: normal normal normal 21px/21px Segoe Script;
+    }
+
     form#logout > button > i.fas.fa-sign-out-alt{
         margin-left: 6em;
         margin-right: 1em;
@@ -365,4 +377,31 @@
         margin-left: 6.5em;
         margin-right: 0.5em;
     }
+
+    .message{
+        font: normal normal normal 1em Segoe Script;
+    }
+
+    .search > div > div > h1{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+
+    .search > div > div > p{
+        font-size: 20px;
+    }
+
+    .search > div > div > h3, .search > div > div > h4, .search > div > div > h5{
+        font-size: 18px;
+    }
+
+    .search > div > div > h4{
+        margin-top: 1em;
+    }
+
+    form#order{
+        margin: 0;
+    }
+
 }
+

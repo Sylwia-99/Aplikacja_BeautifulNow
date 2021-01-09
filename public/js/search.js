@@ -54,8 +54,6 @@ function createAdvertisement(advertisement) {
     const date = clone.querySelector("h4");
     date.innerHTML = advertisement.date;
 
-    clone.querySelector(".fa-instagram");
-    clone.querySelector(".fa-facebook-f");
     clone.querySelector(".fa-heart");
     //favourite.innerText = advertisement.favourite;
     const like = clone.querySelector(".fa-thumbs-up");

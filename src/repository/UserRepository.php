@@ -2,6 +2,8 @@
 
 require_once 'Repository.php';
 require_once __DIR__.'/../models/User.php';
+require_once __DIR__.'/../models/Advertisement.php'; //nie wiem czy git
+
 class UserRepository extends Repository
 {
     public function getUser(string $email): ?User
@@ -75,5 +77,33 @@ class UserRepository extends Repository
 
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
+    }
+
+    public function addFavouriteAdvertisement(String $email, Advertisement $advertisement)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users_advertisements 
+            VALUES(id_user, id_advertisement)
+        ');
+
+        $user=$this->getUser($email);
+
+        $stmt -> execute([
+            $this->getUserID($user),
+            $advertisement->getID()
+        ]);
+    }
+
+    public function loginUser(String $email, string $login)
+    {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE public.users SET is_logged =:login WHERE email = :email
+        ');
+        $stmt->bindParam(':login', $login, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute();
     }
 }

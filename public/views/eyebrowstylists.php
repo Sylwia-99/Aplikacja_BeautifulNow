@@ -8,6 +8,8 @@
     <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <script type="text/javascript" src="./public/js/searches.js" defer></script>
     <script type="text/javascript" src="./public/js/glide.js" defer></script>
+    <script type="text/javascript" src="./public/js/order.js" defer></script>
+    <script type="text/javascript" src="./public/js/favourite.js" defer></script>
 
     <title>EYEBROWSTYLISTS PAGE</title>
 </head>

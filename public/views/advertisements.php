@@ -8,6 +8,8 @@
     <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <script type="text/javascript" src="./public/js/glide.js" defer></script>
+    <script type="text/javascript" src="./public/js/order.js" defer></script>
+    <script type="text/javascript" src="./public/js/favourite.js" defer></script>
 
     <title>ADVERTISEMENT PAGE</title>
 </head>
@@ -31,7 +33,7 @@
             </div>
             <section class="search">
                 <?php foreach ($advertisements as $advertisement): ?>
-                    <?php include 'templates/selectedAds.php';?>
+                    <?php include 'templates/advertisements.php';?>
                 <?php endforeach;?>
             </section>
         </main>

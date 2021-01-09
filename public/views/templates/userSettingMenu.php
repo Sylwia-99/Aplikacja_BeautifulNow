@@ -12,6 +12,9 @@
         <li>
             <a id="f" href="addresses" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
         </li>
+        <li id="setting">
+            <a id="f" href="yourAdvertisements" class="button"><i class="fas fa-bullhorn"></i>Twoje ogłoszenia</a>
+        </li>
         <li>
             <form id="logout1" action="logout" method="GET">
                 <button> <i class="fas fa-sign-out-alt"></i> Wyloguj</button>

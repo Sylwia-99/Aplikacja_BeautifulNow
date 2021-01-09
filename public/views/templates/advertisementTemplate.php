@@ -9,11 +9,11 @@
             <h5>address</h5>
             <h4>date</h4>
             <div id="social-section">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
                 <i class="fas fa-heart"></i>
                 <i class="fas fa-thumbs-up"></i>
-                <i class="order"<button>umów się</button></i>
+                <form id="order" action="order" method="GET">
+                    <i id="order" <button>umów się</button></i>
+                </form>
             </div>
         </div>
     </div>

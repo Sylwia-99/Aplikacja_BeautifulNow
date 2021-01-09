@@ -8,6 +8,7 @@ class SecurityController extends AppController
 {
 
     private $userRepository;
+
     public function __construct()
     {
         parent::__construct();
@@ -38,17 +39,17 @@ class SecurityController extends AppController
 
         $cookie_name = 'user';
         $cookie_value = $_POST["email"];
-        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), '/');
+        setcookie($cookie_name, $cookie_value, time() + 3600 * 24 * 30, '/');
 
-        if(isset($_COOKIE['user'])){
-            $url = "http://$_SERVER[HTTP_HOST]";
-            header("Location: {$url}/home");
-        }
+        $this->userRepository->loginUser($cookie_value, "login");
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/home");
     }
 
     public function logout(){
         if(isset($_COOKIE['user'])){
-            setcookie(($_COOKIE['user']), '', time()-7000000, '/');
+            $this->userRepository->loginUser($_COOKIE['user'], "logout");
+            setcookie('user', "", time() - 3600, '/');
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
@@ -79,6 +80,11 @@ class SecurityController extends AppController
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
+    }
+
+    public function addFavouriteAdvertisement(User $user, Advertisement $advertisement){
+        $this->addFavouriteAdvertisement($user, $advertisement);
+        http_response_code(200);
     }
 
 }

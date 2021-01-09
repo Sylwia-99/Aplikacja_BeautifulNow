@@ -60,6 +60,33 @@ class AdvertisementController extends AppController
         $this->render('eyebrowstylists', ['eyebrowstylists' => $eyebrowstylists]);
     }
 
+    public function history(){
+        $email = $_COOKIE['user'];
+        if($email==null){
+            $email=' ';
+        }
+        $history = $this->advertisementRepository->getAdvertisementByOrdered($email);
+        $this->render('history', ['history' => $history]);
+    }
+
+    public function yourAdvertisements(){
+        $email = $_COOKIE['user'];
+        if($email==null){
+            $email=' ';
+        }
+        $yourAdvertisements = $this->advertisementRepository->getYourAdvertisements($email);
+        $this->render('yourAdvertisements', ['yourAdvertisements' => $yourAdvertisements]);
+    }
+
+    public function favourite(){
+        $email = $_COOKIE['user'];
+        if($email==null){
+            $email=' ';
+        }
+        $favourite = $this->advertisementRepository->getFavouriteAdvertisement($email);
+        $this->render('favourite', ['favourite'=> $favourite]);
+    }
+
     public function addadvertisement()
     {
         if(!isset($_COOKIE['user'])){
@@ -119,6 +146,16 @@ class AdvertisementController extends AppController
 
     public function like(int $id){
         $this->advertisementRepository->like($id);
+        http_response_code(200);
+    }
+
+    public function order(int $id){
+        $this->advertisementRepository->order($_COOKIE['user'], $id);
+        http_response_code(200);
+    }
+
+    public function addToFavourite(int $id){
+        $this->advertisementRepository->addToFavourite($id);
         http_response_code(200);
     }
 

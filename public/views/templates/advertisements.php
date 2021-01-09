@@ -2,6 +2,7 @@
     <img src="public/uploads/<?= $advertisement->getImage()?>">
     <div>
         <h1><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h1>
+        <h2><?= $advertisement->getJob(); ?></h2>
         <p><?= $advertisement->getDescription(); ?></p>
         <h3><?= $advertisement->getTelephone(); ?></h3>
         <h5><?= $advertisement->getAddress(); ?></h5>

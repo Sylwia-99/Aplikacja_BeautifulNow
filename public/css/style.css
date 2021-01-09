@@ -71,9 +71,17 @@ form#logout, form#logout1{
     width: calc(100% - 1px);
 }
 
+form#order, form#fa-heart {
+    height: 2em;
+    width: 6em;
+    border: none;
+    background:transparent;
+    justify-content: flex-start;
+}
+
 button{
     background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 3px 6px #00000029;
     border-radius: 70px;
     width: 50%;
     height: 7vh;
@@ -150,6 +158,10 @@ form#logout > button > i.fas.fa-sign-out-alt{
 form#logout1 > button > i.fas.fa-sign-out-alt{
     margin-left: 30%;
     margin-right: 1em;
+}
+
+i.fas.fa-thumbs-up{
+    color: white;
 }
 
 input{
@@ -307,6 +319,7 @@ div#setting > nav{
     flex-direction: row;
     border-radius: 190px;
     width: 98vw;
+    height: 88vh;
 }
 
 div#setting-favourite > nav{
@@ -469,7 +482,7 @@ h4{
     font: normal normal normal 20px/25px Segoe Script;
 }
 
-.search > div > div > h4 {
+.search > div > div > h4, h4#your {
     margin: 0;
     font: normal normal normal 11px/11px Segoe Script;
 }
@@ -508,7 +521,7 @@ div#setting-favourite{
     background: #6550501c linear-gradient(1deg, #38143b 0%, #622369 50%, #3A133D 100%) 0% 0% no-repeat padding-box;
     border-radius: 90px;
     width: 98vw;
-    height: 79.7%;
+    height: 86.6%;
     margin-top: 0.2em;
 }
 
@@ -605,19 +618,19 @@ div#find input#s[type="submit"]{
     border-radius:0px 70px 70px 0px;
 }
 
-div#history1{
+.history1{
     display: flex;
     align-items: center;
     background: transparent linear-gradient(180deg, #a162a5 0%, #6D336F 100%) 0% 0% no-repeat padding-box;
     border-radius: 10px;
 }
 
-div#history1 div{
+.history1 div{
     margin: 1em;
     width: 30em;
 }
 
-div#history1 div#data{
+.history1 div#data{
     margin: 1em;
     width: 8em;
 }
@@ -763,7 +776,7 @@ template > img{
     height: 10em;
 }
 
-.social-section > i.fas.fa-thumbs-up:hover, #s:hover, #ss:hover{
+.social-section > i.fas.fa-thumbs-up:hover, #fa-heart:hover #s:hover, #ss:hover, #order:hover{
     cursor: pointer;
 }
 
@@ -776,3 +789,10 @@ template > img{
     display:none;
 }
 
+.ordered{
+    color: transparent;
+}
+
+.fav{
+    color: red;
+}

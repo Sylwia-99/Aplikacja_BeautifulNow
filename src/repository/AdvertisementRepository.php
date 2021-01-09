@@ -44,7 +44,6 @@ class AdvertisementRepository extends Repository
 
         $user = $userRepo->getUser($email);
         $assignedById = $userRepo->getUserId($user);
-
         $stmt->execute([
             $advertisement->getName(),
             $advertisement->getSurname(),
@@ -64,10 +63,43 @@ class AdvertisementRepository extends Repository
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-        SELECT * FROM advertisements
+        SELECT * FROM advertisements WHERE ordered_by IS NULL 
         ');
 
         $stmt->execute();
+        $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($advertisements as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['profession'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
+            );
+        }
+        return $result;
+    }
+
+    public function getYourAdvertisements(string $email): array
+    {
+        $result = [];
+        $userRepo = new UserRepository();
+        $user = $userRepo->getUser($email);
+        $assignedById = $userRepo->getUserId($user);
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE id_assigned_by = :assignedById 
+        ');
+
+        $stmt->bindParam(':assignedById', $assignedById, PDO::PARAM_INT);
+        $stmt->execute();
+
         $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach($advertisements as $advertisement){
@@ -111,7 +143,7 @@ class AdvertisementRepository extends Repository
                 $advertisement['image'],
                 $advertisement['date'],
                 $advertisement['like'],
-                $advertisement['id']
+                $advertisement['id'],
             );
         }
         return $result;
@@ -144,13 +176,108 @@ class AdvertisementRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getAdvertisementByOrdered(string $email): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM advertisements WHERE ordered_by = :email
+        ');
+
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($advertisements as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['profession'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
+            );
+        }
+        return $result;
+    }
+
+    public function getFavouriteAdvertisement(String $email): array
+    {
+        $result = [];
+        $userRepo = new UserRepository();
+        $user = $userRepo->getUser($email);
+        $id = $userRepo->getUserId($user);
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM favourite_advertisements f 
+            LEFT JOIN users u ON f.id_user = u.id 
+            LEFT JOIN advertisements a ON f.id_advertisement = a.id
+            WHERE id_user = :id
+        ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $advertisements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($advertisements as $advertisement){
+            $result[] = new Advertisement(
+                $advertisement['name'],
+                $advertisement['surname'],
+                $advertisement['profession'],
+                $advertisement['description'],
+                $advertisement['address'],
+                $advertisement['telephone'],
+                $advertisement['image'],
+                $advertisement['date'],
+                $advertisement['like'],
+                $advertisement['id']
+            );
+        }
+
+        return $result;
+    }
+
+
     public function like(int $id)
     {
         $stmt = $this->database->connect()->prepare('
-        UPDATE advertisements SET "like" = "like" + 1 WHERE id = :id
+            UPDATE advertisements SET "like" = "like" + 1 WHERE id = :id
         ');
 
         $stmt->bindParam(':id', $id,PDO::PARAM_INT);
         $stmt->execute();
+    }
+
+    public function order(String $email, int $id)
+    {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE public.advertisements SET ordered_by = :email WHERE id = :id
+        ');
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute();
+    }
+
+    public function addToFavourite(int $id)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO favourite_advertisements (id_user, id_advertisement)
+            VALUES (?, ?)
+        ');
+
+        $email = ($_COOKIE['user']);
+        $userRepo = new UserRepository();
+        $user = $userRepo->getUser($email);
+        $stmt->execute([
+            $userRepo->getUserId($user),
+            $id
+            ]);
     }
 }

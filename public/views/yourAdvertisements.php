@@ -26,16 +26,18 @@ if(!isset($_COOKIE['user'])){
                     <h1 id="setting">Historie twoich usług</h1>
                 </div>
             </div>
-            <section id="history" class="favourites">
-                <?php foreach ($history as $advertisement): ?>
-                    <div id="<?= $advertisement->getId(); ?>" class="history1">
+            <section id="history">
+                <?php foreach ($yourAdvertisements as $advertisement): ?>
+                    <div id="<?= $advertisement->getId()?>">
+                        <img src="public/uploads/<?= $advertisement->getImage()?>">
                         <div>
-                            <h2><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h2>
-                            <h3><?= $advertisement->getJob(); ?></h3>
-                            <h3><?= $advertisement->getDescription(); ?></h3>
-                            <a id="again" href="#" class="button"> Umów ponownie </a>
+                            <h1><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h1>
+                            <p><?= $advertisement->getDescription(); ?></p>
+                            <h2><?= $advertisement->getTelephone(); ?></h2>
+                            <h2><?= $advertisement->getAddress(); ?></h2>
+                            <h4 id="your"><?= $advertisement->getDate(); ?></h4>
+                            <i class="fas fa-thumbs-up"> <?= $advertisement->getLike()?></i>
                         </div>
-                        <h2><?= $advertisement->getDate(); ?></h2>
                     </div>
                 <?php endforeach;?>
             </section>

@@ -1,3 +1,10 @@
+<?php
+if(!isset($_COOKIE['user'])){
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/login");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
@@ -27,24 +34,16 @@
                     <div id="f" class="glide">
                         <div id="f" class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
-                                <li class="glide__slide">
-                                    <div id="favourite1">
-                                        <img src="public/img/profile.svg">
-                                        <h2>Imię Nazwisko</h2>
-                                        <h3>Fryzjer</h3>
-                                        <p>Opis</p>
-                                        <a id="contact" href="#" class="button"></i> Kontakt</a>
-                                    </div>
-                                </li>
-                                <li class="glide__slide">
-                                    <div id="favourite1">
-                                        <img src="public/img/profile.svg">
-                                        <h2>Imię Nazwisko</h2>
-                                        <h3>Fryzjer</h3>
-                                        <p>Opis</p>
-                                        <a id="contact" href="#" class="button"></i> Kontakt</a>
-                                    </div>
-                                </li>
+                                <?php foreach ($favourite as $advertisement): ?>
+                                    <li class="glide__slide">
+                                        <div id="favourite1">
+                                            <img src="public/img/profile.svg">
+                                            <h2><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h2>
+                                            <h3><?= $advertisement->getJob(); ?></h3>
+                                            <a id="contact" href="#" class="button"></i> Kontakt</a>
+                                        </div>
+                                    </li>
+                                <?php endforeach;?>
                             </ul>
                             <div id="f" class="glide__arrows" data-glide-el="controls">
                                 <button id="f" class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
