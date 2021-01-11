@@ -71,7 +71,7 @@ form#logout, form#logout1{
     width: calc(100% - 1px);
 }
 
-form#order, form#fa-heart {
+form#order, form#fa-heart, form#delete {
     height: 2em;
     width: 6em;
     border: none;
@@ -80,7 +80,7 @@ form#order, form#fa-heart {
 }
 
 button{
-    background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0% 0% no-repeat padding-box;
+    background: transparent radial-gradient(closest-side at 50% 50%, #702776 0%, #38143B 100%) 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     border-radius: 70px;
     width: 50%;
@@ -160,12 +160,16 @@ form#logout1 > button > i.fas.fa-sign-out-alt{
     margin-right: 1em;
 }
 
-i.fas.fa-thumbs-up{
+i.fas.fa-thumbs-up, i.far.fa-save{
     color: white;
 }
 
+.fa-save{
+    margin-left: 1em;
+}
+
 input{
-    background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #69246E 0%, #351237 100%) 0 0 no-repeat padding-box;
     border-radius: 70px;
     text-align: left;
     font: normal normal normal 1em Segoe Script;
@@ -298,6 +302,7 @@ header > div#icon a {
 
 header > div#icon > a > img {
     width: 1.2em;
+    border-radius: 100%;
 }
 
 div#main{
@@ -437,11 +442,21 @@ section#history.favourites{
     grid-template-columns: 1fr;
 }
 
+section#history{
+    height: 90em;
+}
+
 img#recommended1{
     height: 8em;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
+}
+
+img#setting{
+    width: 12em;
+    border-radius: 100%;
+    margin-right: 1em;
 }
 
 div#recommended > div{
@@ -513,6 +528,7 @@ div#profile{
     justify-content: center;
     align-items: center;
     margin: auto 0 auto 2em;
+    text-align: center;
 }
 
 div#setting-favourite{
@@ -776,7 +792,7 @@ template > img{
     height: 10em;
 }
 
-.social-section > i.fas.fa-thumbs-up:hover, #fa-heart:hover #s:hover, #ss:hover, #order:hover{
+i.fas.fa-thumbs-up:hover, i.fas.fa-heart:hover, #s:hover, #ss:hover, form#order:hover, #delete:hover, i.far.fa-save:hover, i.fas.fa-trash:hover{
     cursor: pointer;
 }
 
@@ -795,4 +811,18 @@ template > img{
 
 .fav{
     color: red;
+}
+
+#no-advertisement{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    color: white;
+}
+
+#email{
+    font-size: 0.8em;
+    text-align: center;
 }

@@ -3,6 +3,6 @@
     <h2>Podaj adres i znajdz usługodawcę z dojazdem do Twojej okolicy</h2>
 </div>
 <div id ="find">
-    <input type="search" placeholder="Adres, np. Armi Krajowej 1">
+    <input type="search" placeholder="Adres, np. Sąspów">
     <input id="ss" type="submit" value="Szukaj">
 </div>

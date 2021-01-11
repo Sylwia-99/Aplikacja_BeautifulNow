@@ -26,6 +26,7 @@ if(!isset($_COOKIE['user'])){
                     <h1 id="setting">Historie twoich usług</h1>
                 </div>
             </div>
+            <?php if($history !=null):?>
             <section id="history" class="favourites">
                 <?php foreach ($history as $advertisement): ?>
                     <div id="<?= $advertisement->getId(); ?>" class="history1">
@@ -39,6 +40,9 @@ if(!isset($_COOKIE['user'])){
                     </div>
                 <?php endforeach;?>
             </section>
+            <?php else:?>
+                <text id="no-advertisement">Do tej pory nie zamawiałaś żadnych usług </text>
+            <?php endif;?>
         </main>
     </div>
 </div>

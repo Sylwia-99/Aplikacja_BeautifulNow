@@ -10,6 +10,7 @@
     <script type="text/javascript" src="./public/js/glide.js" defer></script>
     <script type="text/javascript" src="./public/js/order.js" defer></script>
     <script type="text/javascript" src="./public/js/favourite.js" defer></script>
+    <script type="text/javascript" src="./public/js/delete.js" defer></script>
 
     <title>NAILSSTYLISTS PAGE</title>
 </head>
@@ -21,7 +22,8 @@
             <main>
                 <?php include 'templates/searchByAddressAndDate.php';?>
                 <h4>Stylisci paznokci</h4>
-                <div class="glide">
+                <?php if($nailsstylists !=null):?>
+                    <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <?php foreach ($nailsstylists as $advertisement): ?>
@@ -36,6 +38,9 @@
                         <?php include 'templates/selectedAds.php';?>
                     <?php endforeach;?>
                 </section>
+                <?php else:?>
+                <text id="no-advertisement">Brak usług do wyświetlenia </text>
+                <?php endif;?>
             </main>
         </div>
     </div>

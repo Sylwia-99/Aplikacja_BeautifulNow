@@ -32,6 +32,7 @@ if(!isset($_COOKIE['user'])){
                 </div>
                 <div class="favourites">
                     <div id="f" class="glide">
+                        <?php if($favourite !=null):?>
                         <div id="f" class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
                                 <?php foreach ($favourite as $advertisement): ?>
@@ -51,6 +52,9 @@ if(!isset($_COOKIE['user'])){
                             </div>
                             <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
                         </div>
+                        <?php else:?>
+                        <text id="no-advertisement">Nie masz ulubionych usługodawców </text>
+                        <?php endif;?>
                     </div>
                 </div>
             </main>

@@ -12,6 +12,9 @@
             <form id="order" action="order" method="GET">
                 <i id="order" <button>umów się</button></i>
             </form>
+            <?php if($_COOKIE['isAdmin']==1):?>
+                <i class="fas fa-trash"></i>
+            <?endif;?>
         </div>
     </div>
 </div>

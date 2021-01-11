@@ -10,6 +10,7 @@ if(!isset($_COOKIE['user'])){
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/mediaquery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script type="text/javascript" src="./public/js/save.js" defer></script>
 
     <title>HISTORY PAGE</title>
 </head>
@@ -20,12 +21,13 @@ if(!isset($_COOKIE['user'])){
         <?php include 'templates/userSettingMenu.php';?>
         <main id=favourites>
             <div id=description>
-                <i class="fas fa-history"></i>
+                <i class="fas fa-bullhorn"></i>
                 <div>
-                    <h1 id="setting">Tu znajdziesz</h1>
-                    <h1 id="setting">Historie twoich usług</h1>
+                    <h1 id="setting">Tu znajdziesz dodane</h1>
+                    <h1 id="setting">przez Ciebie ogłoszenia</h1>
                 </div>
             </div>
+            <?php if($yourAdvertisements !=null):?>
             <section id="history">
                 <?php foreach ($yourAdvertisements as $advertisement): ?>
                     <div id="<?= $advertisement->getId()?>">
@@ -37,10 +39,15 @@ if(!isset($_COOKIE['user'])){
                             <h2><?= $advertisement->getAddress(); ?></h2>
                             <h4 id="your"><?= $advertisement->getDate(); ?></h4>
                             <i class="fas fa-thumbs-up"> <?= $advertisement->getLike()?></i>
+                            <i class="far fa-save"></i>
                         </div>
                     </div>
                 <?php endforeach;?>
             </section>
+                <a id="f" href="saved" class="button">Zapisane</a>
+            <?php else:?>
+                <text id="no-advertisement">Nie masz żadnych ogłoszeń </text>
+            <?php endif;?>
         </main>
     </div>
 </div>

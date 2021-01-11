@@ -1,6 +1,6 @@
 <nav id=favourites>
     <div id="profile">
-        <img src="public/img/profile.svg">
+        <img id="setting" src="public/img/profile.png">
     </div>
     <ul id="f">
         <li>
@@ -12,7 +12,7 @@
         <li>
             <a id="f" href="addresses" class="button"><i class="fas fa-location-arrow"></i> Adresy</a>
         </li>
-        <li id="setting">
+        <li id="f">
             <a id="f" href="yourAdvertisements" class="button"><i class="fas fa-bullhorn"></i>Twoje ogłoszenia</a>
         </li>
         <li>

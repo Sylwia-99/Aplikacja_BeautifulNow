@@ -19,7 +19,8 @@ if(!isset($_COOKIE['user'])){
         <div id="setting">
             <nav>
                 <div id="profile">
-                    <img src="public/img/profile.svg">
+                    <img id="setting" src="public/img/profile.png">
+                    <text id="email"><?php echo($_COOKIE['user'])?></text>
                 </div>
                 <ul>
                     <li id="setting">

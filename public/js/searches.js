@@ -1,4 +1,4 @@
-const address = document.querySelector('input[placeholder="Adres, np. Armi Krajowej 1"]');
+const address = document.querySelector('input[placeholder="Adres, np. Sąspów"]');
 const date = document.querySelector('input[placeholder="Kiedy"]');
 const advertisementContainer = document.querySelector(".search");
 
@@ -43,8 +43,8 @@ function createAdvertisement(advertisement) {
     image.src = `/public/uploads/${advertisement.image}`;
     const nameAndSurname = clone.querySelector("h1");
     nameAndSurname.innerHTML = `${advertisement.name}  ${advertisement.surname}`;
-    //const profession = clone.querySelector("h2");
-    //profession.innerHTML = advertisement.profession;
+    const profession = clone.querySelector("h2");
+    profession.innerHTML = advertisement.profession;
     const description = clone.querySelector("p");
     description.innerHTML = advertisement.description;
     const telephone = clone.querySelector("h3");
@@ -54,10 +54,12 @@ function createAdvertisement(advertisement) {
     const date = clone.querySelector("h4");
     date.innerHTML = advertisement.date;
 
-    clone.querySelector(".fa-heart");
-    //favourite.innerText = advertisement.favourite;
+    const favourite = clone.querySelector(".fa-heart");
+    favourite.addEventListener("click", functionFavourite);
     const like = clone.querySelector(".fa-thumbs-up");
+    like.addEventListener("click", giveLike);
     like.innerText = advertisement.like;
-    clone.querySelector(".order");
+    const order = clone.querySelector("form#order");
+    order.addEventListener("click", ordered);
     advertisementContainer.appendChild(clone);
 }

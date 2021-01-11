@@ -26,38 +26,72 @@ class AdvertisementController extends AppController
 
     public function first(){
         $advertisements = $this->advertisementRepository->getAdvertisements();
-        $this->render('first', ['advertisements' => $advertisements]);
+        if($advertisements == null){
+            $this->render('advertisements');
+        }
+        else{
+            $this->render('first', ['advertisements' => $advertisements]);
+        }
     }
 
     public function home(){
         $advertisements = $this->advertisementRepository->getAdvertisements();
-        $this->render('home', ['advertisements' => $advertisements]);
+        if($advertisements == null){
+            $this->render('advertisements');
+        }
+        else{
+            $this->render('home', ['advertisements' => $advertisements]);
+        }
     }
 
     public function hairdressers(){
         $hairdressers = $this->advertisementRepository->getAdvertisementsByProfession('Fryzjer');
-        $this->render('hairdressers', ['hairdressers' => $hairdressers]);
+        if($hairdressers == null){
+            $this->render('hairdressers');
+        }
+        else{
+            $this->render('hairdressers', ['hairdressers' => $hairdressers]);
+        }
     }
 
     public function makeupartists(){
         $makeupartists = $this->advertisementRepository->getAdvertisementsByProfession('Makijażysta');
-        $this->render('makeupartists', ['makeupartists' => $makeupartists]);
+        if($makeupartists == null){
+            $this->render('makeupartists');
+        }
+        else{
+            $this->render('makeupartists', ['makeupartists' => $makeupartists]);
+        }
     }
 
     public function barbers(){
         $barbers = $this->advertisementRepository->getAdvertisementsByProfession('Barber');
-        $this->render('barbers', ['barbers' => $barbers]);
+        if($barbers == null){
+            $this->render('barbers');
+        }
+        else{
+            $this->render('barbers', ['barbers' => $barbers]);
+        }
     }
 
     public function nailsstylists(){
         $nailsstylists = $this->advertisementRepository->getAdvertisementsByProfession('Stylista paznokci');
-        $this->render('nailsstylists', ['nailsstylists' => $nailsstylists]);
+        if($nailsstylists == null){
+            $this->render('nailsstylists');
+        }
+        else{
+            $this->render('nailsstylists', ['nailsstylists' => $nailsstylists]);
+        }
     }
-
 
     public function eyebrowstylists(){
         $eyebrowstylists = $this->advertisementRepository->getAdvertisementsByProfession('Stylista brwi');
-        $this->render('eyebrowstylists', ['eyebrowstylists' => $eyebrowstylists]);
+        if($eyebrowstylists == null){
+            $this->render('eyebrowstylists');
+        }
+        else{
+            $this->render('eyebrowstylists', ['eyebrowstylists' => $eyebrowstylists]);
+        }
     }
 
     public function history(){
@@ -84,7 +118,26 @@ class AdvertisementController extends AppController
             $email=' ';
         }
         $favourite = $this->advertisementRepository->getFavouriteAdvertisement($email);
-        $this->render('favourite', ['favourite'=> $favourite]);
+        if($favourite == null){
+            $this->render('favourite');
+        }
+        else{
+            $this->render('favourite', ['favourite'=> $favourite]);
+        }
+    }
+
+    public function saved(){
+        $email = $_COOKIE['user'];
+        if($email==null){
+            $email=' ';
+        }
+        $saved = $this->advertisementRepository->getSavedAdvertisements($email);
+        if($saved == null){
+            $this->render('saved');
+        }
+        else{
+            $this->render('saved', ['saved'=> $saved]);
+        }
     }
 
     public function addadvertisement()
@@ -109,6 +162,12 @@ class AdvertisementController extends AppController
                 'messages'=> $this ->messages, 'advertisement' => $advertisement]);
         }
         return $this ->render('addadvertisement',['messages'=> $this -> messages]);
+    }
+
+    public function deleteAdvertisement(int $id)
+    {
+        $this->advertisementRepository->deleteAdvertisement($id);
+        http_response_code(200);
     }
 
     public function search()
@@ -156,6 +215,11 @@ class AdvertisementController extends AppController
 
     public function addToFavourite(int $id){
         $this->advertisementRepository->addToFavourite($id);
+        http_response_code(200);
+    }
+
+    public function addToSaved(int $id){
+        $this->advertisementRepository->addToSaved($id);
         http_response_code(200);
     }
 

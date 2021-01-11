@@ -79,21 +79,6 @@ class UserRepository extends Repository
         return $data['id'];
     }
 
-    public function addFavouriteAdvertisement(String $email, Advertisement $advertisement)
-    {
-        $stmt = $this->database->connect()->prepare('
-            INSERT INTO users_advertisements 
-            VALUES(id_user, id_advertisement)
-        ');
-
-        $user=$this->getUser($email);
-
-        $stmt -> execute([
-            $this->getUserID($user),
-            $advertisement->getID()
-        ]);
-    }
-
     public function loginUser(String $email, string $login)
     {
         $stmt = $this->database->connect()->prepare('
@@ -105,5 +90,17 @@ class UserRepository extends Repository
 
         $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->execute();
+    }
+
+    public function isAnAdmin(string $email): ?bool
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT is_admin FROM public.users WHERE email = :email
+        ');
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $isOrnot = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $isOrnot['is_admin'];
     }
 }

@@ -1,4 +1,4 @@
-const address = document.querySelector('input[placeholder="Adres, np. Armi Krajowej 1"]');
+const address = document.querySelector('input[placeholder="Adres, np. Sąspów"]');
 const advertisementContainer = document.querySelector(".search");
 
 const button = document.querySelector('#ss');
@@ -54,10 +54,12 @@ function createAdvertisement(advertisement) {
     const date = clone.querySelector("h4");
     date.innerHTML = advertisement.date;
 
-    clone.querySelector(".fa-heart");
-    //favourite.innerText = advertisement.favourite;
+    const favourite = clone.querySelector(".fa-heart");
+    favourite.addEventListener("click", functionFavourite);
     const like = clone.querySelector(".fa-thumbs-up");
+    like.addEventListener("click", giveLike);
     like.innerText = advertisement.like;
-    clone.querySelector(".order");
+    const order = clone.querySelector("form#order");
+    order.addEventListener("click", ordered);
     advertisementContainer.appendChild(clone);
 }
