@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const emailInput = form.querySelector('input[name="email"]');
 const confirmedPasswordInput = form.querySelector('input[name="confirmedPassword"]');
+const PasswordInput = form.querySelector('input[name="password"]');
 const phoneNumberInput = form.querySelector('input[name="phone"]');
 
 function isEmail(email){
@@ -31,7 +32,7 @@ emailInput.addEventListener('keyup', validateEmail);
 function validatePassword(){
     setTimeout( function(){
             const condition = arePasswordSame(
-                confirmedPasswordInput.previousElementSibling.value,
+                PasswordInput.value,
                 confirmedPasswordInput.value
             );
             markValidation(confirmedPasswordInput, condition);

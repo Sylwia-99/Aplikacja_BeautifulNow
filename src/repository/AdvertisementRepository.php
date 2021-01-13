@@ -299,56 +299,65 @@ class AdvertisementRepository extends Repository
 
     public function like(int $id)
     {
-        $stmt = $this->database->connect()->prepare('
+        if(isset($_COOKIE['user'])){
+            $stmt = $this->database->connect()->prepare('
             UPDATE advertisements SET "like" = "like" + 1 WHERE id = :id
         ');
 
-        $stmt->bindParam(':id', $id,PDO::PARAM_INT);
-        $stmt->execute();
+            $stmt->bindParam(':id', $id,PDO::PARAM_INT);
+            $stmt->execute();
+        }
     }
 
     public function order(String $email, int $id)
     {
-        $stmt = $this->database->connect()->prepare('
+        if(isset($_COOKIE['user'])){
+            $stmt = $this->database->connect()->prepare('
             UPDATE public.advertisements SET ordered_by = :email WHERE id = :id
         ');
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
 
-        $stmt->fetch(PDO::FETCH_ASSOC);
-        $stmt->execute();
+            $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt->execute();
+        }
     }
 
     public function addToFavourite(int $id)
     {
-        $stmt = $this->database->connect()->prepare('
+        if(isset($_COOKIE['user'])){
+            $stmt = $this->database->connect()->prepare('
             INSERT INTO favourite_advertisements (id_user, id_advertisement)
             VALUES (?, ?)
         ');
 
-        $email = ($_COOKIE['user']);
-        $userRepo = new UserRepository();
-        $user = $userRepo->getUser($email);
-        $stmt->execute([
-            $userRepo->getUserId($user),
-            $id
+            $email = ($_COOKIE['user']);
+            $userRepo = new UserRepository();
+            $user = $userRepo->getUser($email);
+            $stmt->execute([
+                $userRepo->getUserId($user),
+                $id
             ]);
+        }
     }
 
     public function addToSaved(int $id)
     {
-        $stmt = $this->database->connect()->prepare('
+        if(isset($_COOKIE['user'])){
+            $stmt = $this->database->connect()->prepare('
             INSERT INTO users_advertisements (id_user, id_advertisement)
             VALUES (?, ?)
         ');
 
-        $email = ($_COOKIE['user']);
-        $userRepo = new UserRepository();
-        $user = $userRepo->getUser($email);
-        $stmt->execute([
-            $userRepo->getUserId($user),
-            $id
-        ]);
+            $email = ($_COOKIE['user']);
+            $userRepo = new UserRepository();
+            $user = $userRepo->getUser($email);
+            $stmt->execute([
+                $userRepo->getUserId($user),
+                $id
+            ]);
+        }
+
     }
 }
