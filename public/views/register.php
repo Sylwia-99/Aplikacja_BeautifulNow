@@ -1,7 +1,7 @@
 <?php
 if(isset($_COOKIE['user'])){
     $url = "http://$_SERVER[HTTP_HOST]";
-    header("Location: {$url}/home");
+    header("Location: {$url}/setting");
     exit();
 }
 ?>

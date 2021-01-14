@@ -13,6 +13,7 @@ if(!isset($_COOKIE['user'])){
     <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide.theme.min.css">
     <script type="text/javascript" src="./public/js/glide.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
     <title>FAVOURITE PAGE</title>
 </head>
@@ -21,7 +22,6 @@ if(!isset($_COOKIE['user'])){
         <?php include 'templates/header.php';?>
         <div id="setting-favourite">
             <?php include 'templates/userSettingMenu.php';?>
-            </nav>
             <main id=favourites>
                 <div id=description>
                     <i class="far fa-heart"></i>
@@ -38,7 +38,7 @@ if(!isset($_COOKIE['user'])){
                                 <?php foreach ($favourite as $advertisement): ?>
                                     <li class="glide__slide">
                                         <div id="favourite1">
-                                            <img src="public/img/profile.svg">
+                                            <img src="public/img/profile.png">
                                             <h2><?= $advertisement->getName()." ".$advertisement->getSurname(); ?></h2>
                                             <h3><?= $advertisement->getJob(); ?></h3>
                                             <a id="contact" href="#" class="button"></i> Kontakt</a>
@@ -50,7 +50,6 @@ if(!isset($_COOKIE['user'])){
                                 <button id="f" class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
                                 <button id="f" class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
                             </div>
-                            <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
                         </div>
                         <?php else:?>
                         <text id="no-advertisement">Nie masz ulubionych usługodawców </text>

@@ -80,6 +80,10 @@
         font: normal normal normal 18px/28px Segoe Script;
     }
 
+    a#zr{
+        font: normal normal normal 30px Segoe Script
+    }
+
     nav{
         width: 26vw;
     }
@@ -184,6 +188,10 @@
 
     #name input, #surname input{
         margin-left: 0;
+    }
+
+    #name, #surname{
+        width: 10em;
     }
 
     h4{
@@ -409,5 +417,16 @@
         margin: 0;
     }
 
+    .history1{
+        height: 10em;
+    }
+
+    .history1 div > h2{
+        font-size: 0.8em;
+    }
+
+    .history1 > div > h3{
+        font: normal normal normal 18px/18px Segoe Script;
+    }
 }
 

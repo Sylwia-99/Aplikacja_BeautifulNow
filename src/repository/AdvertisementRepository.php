@@ -273,6 +273,7 @@ class AdvertisementRepository extends Repository
             SELECT * FROM advertisements a
             LEFT JOIN users_advertisements ud
             ON a.id = ud.id_advertisement WHERE id_assigned_by = :id
+            AND a.id = ud.id_advertisement
         ');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();

@@ -11,8 +11,7 @@
     <script type="text/javascript" src="./public/js/order.js" defer></script>
     <script type="text/javascript" src="./public/js/favourite.js" defer></script>
     <script type="text/javascript" src="./public/js/delete.js" defer></script>
-
-    <title>ADVERTISEMENT PAGE</title>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>    <title>ADVERTISEMENT PAGE</title>
 </head>
 <body>
 <div class="container-base">

@@ -122,6 +122,10 @@ a#f.button, a#s.button{
     text-align: left;
 }
 
+#favourites > a#f.button{
+    text-align: center;
+}
+
 div#favourite1 .button{
     width: 5em;
     background: #411743 0 0 no-repeat padding-box;
@@ -582,6 +586,7 @@ div#favourite1{
 
 div#favourite1 > img{
     width: 5em;
+    border-radius: 100%;
 }
 
 hr{
@@ -692,7 +697,7 @@ div.glide__arrows{
 }
 
 .favourites{
-    width: 50em;
+    width: 50vw;
 }
 
 #favourite1{
