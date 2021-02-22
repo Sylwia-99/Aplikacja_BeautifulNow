@@ -25,7 +25,8 @@ class UserRepository extends Repository
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['salt']
         );
     }
 
@@ -42,14 +43,15 @@ class UserRepository extends Repository
         ]);
 
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users (email, password, id_user_details)
-            VALUES (?, ?, ?)
+            INSERT INTO users (email, password, id_user_details, salt)
+            VALUES (?, ?, ?, ?)
         ');
 
         $stmt -> execute([
             $user->getEmail(),
             $user->getPassword(),
-            $this->getUserDetailsId($user)
+            $this->getUserDetailsId($user),
+            $user->getSalt()
         ]);
     }
 

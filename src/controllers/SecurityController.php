@@ -21,13 +21,15 @@ class SecurityController extends AppController
         }
 
         $email = $_POST["email"];
-        $password = md5($_POST["password"]);
-
+        $password = $_POST["password"];
         $user = $this->userRepository->getUser($email);
 
         if(!$user){
             return $this->render( 'login', ["messages" => ['User not exist!']]);
         }
+
+        $salt = $user->getSalt();
+        $password = md5(md5($password.$salt));
 
         if($user->getEmail() != $email){
             return $this->render('login', ["messages" => ['USER WITH THIS EMAIL NOT EXIST!']]);
@@ -69,19 +71,23 @@ class SecurityController extends AppController
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmedPassword = $_POST['confirmedPassword'];
-        //$password_hash = password_hash($password, PASSWORD_DEFAULT);
         $phone= $_POST['phone'];
+        $salt = $this->generateToken();
 
         if($password !== $confirmedPassword){
             return $this->render("register", ["messages" => ["Please provide proper password!"]]);
         }
 
-        $user = new User($email, md5($password), $name, $surname);
+        $user = new User($email, md5(md5($password.$salt)), $name, $surname, $salt);
         $user->setPhone($phone);
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
+    }
+
+    public function generateToken(){
+        return bin2hex(random_bytes(50));
     }
 }

@@ -8,13 +8,15 @@ class User
     private $name;
     private $surname;
     private $phone;
+    private $salt;
 
-    public function __construct(string $email, string $password, string $name, string $surname)
+    public function __construct(string $email, string $password, string $name, string $surname, string $salt)
     {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+        $this->salt = $salt;
     }
 
     public function getEmail(): string
@@ -65,5 +67,15 @@ class User
     public function setPhone(string $phone): void
     {
         $this->phone = $phone;
+    }
+
+    public function getSalt(): string
+    {
+        return $this->salt;
+    }
+
+    public function setSalt(string $salt): void
+    {
+        $this->salt = $salt;
     }
 }
